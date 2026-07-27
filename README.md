@@ -39,6 +39,18 @@ grep -n "CONFIRM:\|SWAP:" index.html
 ## Notes
 
 - Concept: the name is *Undefeated*, so the site is built as a fight record — 3 reviews becomes **3–0, zero losses**, reviews become wins, the owner's own line closes the page.
-- Stack: hand-written CSS, GSAP + ScrollTrigger + Lenis via CDN, Anton + Inter.
-- Respects `prefers-reduced-motion` — all motion and the scramble effect drop out, site stays fully usable.
+- Stack: hand-written CSS, **no framework and no JS libraries**. Big Shoulders Display / Archivo / Chivo Mono.
+- **Lenis and GSAP were removed deliberately.** Smooth-scroll hijacking made the page feel laggy; native scroll plus IntersectionObserver reveals is smooth and ships ~90KB less JS. Nothing is bound to the scroll event.
+- Perf: hero video is 580KB (h264, muted, `playsinline`, poster-first, skipped on Save-Data), all images are lazy-loaded with intrinsic dimensions, lower sections use `content-visibility:auto`. No `backdrop-filter` — it was the other jank source.
+- Respects `prefers-reduced-motion` — ticker, reveals and scramble all drop out.
 - Sticky call bar on mobile: this is a phone-first local service, the tap-to-call is the conversion.
+
+## Media credits (all licence-free, all placeholder)
+
+| File | Source |
+|---|---|
+| `video/hero.mp4` | Mixkit clip 47588, trimmed/compressed |
+| `img/hero-poster.jpg` | frame from the above |
+| `img/before.jpg`, `after.jpg`, `macro.jpg`, `polish.jpg`, `interior.jpg`, `foam.jpg` | Pexels |
+
+Every one is demo material and the before/after is labelled as such **on the page**. Replace with the owner's own work before launch.
