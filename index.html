@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Undefeated Detailing — Auto Detailing | 909-205-3009</title>
-<meta name="description" content="Undefeated Detailing. Three reviews. Three five-stars. Zero losses. Auto detailing done like the car is ours. Call 909-205-3009.">
-<meta name="theme-color" content="#08080A">
+<meta name="description" content="Auto detailing in Southern California. A perfect five-star record on Google. Treated like the car is ours. Call 909-205-3009.">
+<meta name="theme-color" content="#0B0B0C">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Undefeated Detailing — Three Fights. Three Wins. Zero Losses.">
-<meta property="og:description" content="Auto detailing done like the car is ours. Perfect 5.0 on Google. Call 909-205-3009.">
+<meta property="og:title" content="Undefeated Detailing — Auto Detailing">
+<meta property="og:description" content="A perfect five-star record on Google. Treated like the car is ours. Call 909-205-3009.">
 <meta property="og:image" content="img/hero-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Undefeated Detailing — Three Fights. Three Wins. Zero Losses.">
-<meta name="twitter:description" content="Auto detailing done like the car is ours. Perfect 5.0 on Google. Call 909-205-3009.">
+<meta name="twitter:title" content="Undefeated Detailing — Auto Detailing">
+<meta name="twitter:description" content="A perfect five-star record on Google. Treated like the car is ours. Call 909-205-3009.">
 
 <!--
   ============================================================================
@@ -30,321 +30,238 @@
     3. CONFIRM: mobile or shop-based    (NOT claimed anywhere)
     4. CONFIRM: service list            (placeholder structure only)
     5. CONFIRM: pricing                 (no prices shown - quote-based)
-    6. CONFIRM: form endpoint           (mailto: fallback)
+    6. CONFIRM: Cal.com account + event types, real availability, deposits
+                (booking block is a working PREVIEW, takes no real bookings)
     7. CONFIRM: social profiles         (omitted, no fake links)
     8. CONFIRM: years in business, certifications, insurance (NOT claimed)
-    9. CONFIRM: Cal.com account, event types, real availability, deposit rules
-       (the booking block is a working PREVIEW, it does not take real bookings)
 
-  IMAGERY: licence-free stock (Pexels / Mixkit), used as demo only and labelled
-  as such on the page. SWAP: every file in /img and /video for the owner's own
-  work before launch.
+  IMAGERY: licence-free stock (Pexels / Mixkit), demo only, labelled as such.
+  SWAP every file in /img and /video for the owner's own work before launch.
   ============================================================================
 -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Archivo:wght@400;500;600&family=Chivo+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/hero-poster.jpg">
 
 <style>
 :root{
-  --ink:#08080A;
-  --ink-2:#0D0D10;
-  --paper:#EFEDE8;
-  --gold:#D9B44A;
-  --gold-dim:#8E7228;
-  --rule:rgba(239,237,232,.13);
-  --pad:clamp(20px,5vw,64px);
-  --rail:clamp(0px,4vw,72px);
-  --mono:"Chivo Mono",ui-monospace,SFMono-Regular,monospace;
+  --ink:#0B0B0C;
+  --ink-soft:#17181A;
+  --paper:#F2F0EC;
+  --paper-2:#E7E4DE;
+  --grey:#6E6F72;
+  --line-dark:rgba(242,240,236,.16);
+  --line-light:rgba(11,11,12,.14);
+  --pad:clamp(22px,5vw,72px);
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:var(--ink);color:var(--paper);
-  font:400 16px/1.6 Archivo,system-ui,sans-serif;
+  margin:0;background:var(--paper);color:var(--ink);
+  font:400 17px/1.65 Archivo,system-ui,sans-serif;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 img,video{max-width:100%;display:block}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+:focus-visible{outline:1.5px solid currentColor;outline-offset:4px}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:var(--pad);top:14px;z-index:99;background:var(--gold);color:var(--ink);padding:10px 16px;font-weight:600}
+.skip:focus{left:var(--pad);top:14px;z-index:99;background:var(--ink);color:var(--paper);padding:10px 16px}
 
 h1,h2,h3{
-  font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;
-  text-transform:uppercase;letter-spacing:.005em;line-height:.84;margin:0;
+  font-weight:600;text-transform:uppercase;letter-spacing:-.012em;
+  line-height:.98;margin:0;font-family:Archivo,sans-serif;
 }
-.label,.mono{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.26em;text-transform:uppercase}
-.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--pad)}
-section{padding-block:clamp(72px,11vw,140px);position:relative}
-.gold{color:var(--gold)}
-
-/* lower sections skip layout/paint until they are near the viewport */
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;text-transform:none;letter-spacing:0;font-weight:400}
+.meta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--pad)}
+.narrow{max-width:880px}
+section{padding-block:clamp(74px,10vw,142px)}
+.dark{background:var(--ink);color:var(--paper)}
+.dark .meta{color:rgba(242,240,236,.5)}
 .defer{content-visibility:auto;contain-intrinsic-size:auto 900px}
+hr.rule{border:0;height:1px;background:var(--line-light);margin:0}
 
-/* ---- side rail ---- */
-.rail{
-  position:fixed;left:0;top:0;bottom:0;width:var(--rail);z-index:40;
-  display:none;align-items:center;justify-content:center;
-  border-right:1px solid var(--rule);background:var(--ink);
-}
-.rail span{
-  writing-mode:vertical-rl;transform:rotate(180deg);
-  font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:.42em;
-  font-size:11px;color:rgba(239,237,232,.45);
-}
-.rail span b{color:var(--gold);font-weight:600}
-@media(min-width:1100px){.rail{display:flex}body{padding-left:var(--rail)}}
-
-/* ---- nav ---- */
+/* ---- header ---- */
 .nav{
-  position:sticky;top:0;z-index:50;
-  display:flex;align-items:center;justify-content:space-between;gap:20px;
-  padding:13px var(--pad);
-  background:rgba(8,8,10,.92);border-bottom:1px solid var(--rule);
+  position:absolute;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:26px var(--pad);color:var(--paper);
 }
-.nav .mark{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:22px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;line-height:1}
-.nav .links{display:none;gap:28px}
-.nav .links a{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:rgba(239,237,232,.65)}
-.nav .links a:hover{color:var(--gold)}
-@media(min-width:880px){.nav .links{display:flex}}
+.nav a{text-decoration:none}
+.nav .mark{font-weight:600;font-size:15px;letter-spacing:.16em;text-transform:uppercase}
+.nav .links{display:none;gap:30px;font-size:13px;letter-spacing:.04em}
+.nav .links a{color:rgba(242,240,236,.72)}
+.nav .links a:hover{color:var(--paper)}
+.nav .tel{font-size:13px;letter-spacing:.06em;border-bottom:1px solid rgba(242,240,236,.4);padding-bottom:3px}
+@media(min-width:900px){.nav .links{display:flex}}
 
-.btn{
-  display:inline-flex;align-items:center;gap:10px;justify-content:center;
-  padding:16px 26px;text-decoration:none;border:1px solid var(--gold);
-  font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;
-  transition:background .18s ease,color .18s ease,border-color .18s ease;
-}
-.btn-solid{background:var(--gold);color:var(--ink)}
-.btn-solid:hover{background:var(--paper);border-color:var(--paper)}
-.btn-ghost{color:var(--paper);border-color:var(--rule)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.btn-sm{padding:12px 18px;white-space:nowrap}
-@media(max-width:480px){.btn-sm{padding:11px 12px;letter-spacing:.08em;font-size:11px}}
-
-.chip{
-  display:inline-flex;align-items:center;gap:9px;padding:8px 14px;
-  border:1px solid var(--rule);border-radius:999px;background:rgba(8,8,10,.55);
-  font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:rgba(239,237,232,.85);
-}
-.dot{width:7px;height:7px;border-radius:50%;background:#3FBF6A}
-.chip[data-state="closed"] .dot{background:var(--gold-dim)}
-.stars{letter-spacing:.14em;color:var(--gold)}
-
-/* ---- crosshairs ---- */
-.reticle{position:absolute;inset:0;pointer-events:none;z-index:4;opacity:.55}
-.reticle i{position:absolute;width:13px;height:13px}
-.reticle i::before,.reticle i::after{content:"";position:absolute;background:var(--gold)}
-.reticle i::before{left:50%;top:0;width:1px;height:100%;transform:translateX(-50%)}
-.reticle i::after{top:50%;left:0;height:1px;width:100%;transform:translateY(-50%)}
-.reticle .tl{left:16px;top:16px}.reticle .tr{right:16px;top:16px}
-.reticle .bl{left:16px;bottom:16px}.reticle .br{right:16px;bottom:16px}
-
-/* ---- HERO ---- */
-.hero{
-  position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
-  padding-block:clamp(80px,12vh,130px) clamp(40px,7vh,76px);overflow:hidden;
-}
-.hero-media{position:absolute;inset:0;z-index:0}
+/* ---- hero ---- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:var(--ink);color:var(--paper);overflow:hidden}
+.hero-media{position:absolute;inset:0}
 .hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover}
 .hero-media::after{
   content:"";position:absolute;inset:0;
-  background:
-    linear-gradient(180deg,rgba(8,8,10,.82) 0%,rgba(8,8,10,.35) 34%,rgba(8,8,10,.92) 84%,var(--ink) 100%),
-    linear-gradient(90deg,rgba(8,8,10,.8),transparent 62%);
+  background:linear-gradient(180deg,rgba(11,11,12,.72),rgba(11,11,12,.18) 40%,rgba(11,11,12,.86) 88%,var(--ink));
 }
-.hero .wrap{position:relative;z-index:5;width:100%}
-.hero-head{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(20px,4vw,34px)}
-.hero h1{font-size:clamp(56px,13.6vw,198px);line-height:.8}
-.hero h1 .l2{display:block;color:var(--gold);font-size:.34em;letter-spacing:.16em;margin-top:.14em}
-.hero-sub{max-width:44ch;font-size:clamp(16px,2vw,19px);color:rgba(239,237,232,.78);margin:clamp(20px,3vw,30px) 0 0}
-.hero-sub em{font-style:normal;color:var(--gold)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-
-/* ---- record ticker ---- */
-.ticker{border-block:1px solid var(--rule);background:var(--ink-2);overflow:hidden;padding-block:14px}
-.ticker-track{display:flex;gap:0;width:max-content;animation:slide 34s linear infinite;animation-play-state:paused}
-.ticker-track.run{animation-play-state:running}
-.ticker-track span{
-  font-family:"Big Shoulders Display",sans-serif;font-weight:900;text-transform:uppercase;
-  font-size:clamp(20px,3vw,34px);letter-spacing:.04em;color:rgba(239,237,232,.16);
-  padding-inline:26px;white-space:nowrap;
+.hero .wrap{position:relative;z-index:3;width:100%;padding-bottom:clamp(40px,7vh,84px)}
+.hero h1{font-size:clamp(38px,6.4vw,92px);max-width:15ch}
+.hero h1 .serif{display:block;font-size:1.02em;line-height:1.02;margin-top:.06em;color:rgba(242,240,236,.86)}
+.hero-foot{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:26px;
+  margin-top:clamp(30px,5vw,52px);padding-top:24px;border-top:1px solid var(--line-dark);
 }
-.ticker-track span b{color:var(--gold);font-weight:900}
-@keyframes slide{to{transform:translate3d(-50%,0,0)}}
+.hero-foot p{margin:0;max-width:38ch;color:rgba(242,240,236,.72);font-size:16px}
 
-/* ---- record ---- */
-.tape{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:clamp(30px,5vw,52px)}
-@media(min-width:760px){.tape{grid-template-columns:repeat(4,1fr)}}
-.tape div{background:var(--ink);padding:clamp(22px,4vw,38px) clamp(16px,3vw,26px)}
-.tape b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:clamp(48px,8vw,88px);line-height:.8;color:var(--gold)}
-.tape span{display:block;margin-top:12px;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(239,237,232,.42)}
+.link{
+  display:inline-flex;align-items:center;gap:12px;text-decoration:none;
+  font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+  border-bottom:1px solid currentColor;padding-bottom:6px;transition:opacity .2s ease;
+}
+.link:hover{opacity:.6}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:17px 30px;text-decoration:none;background:var(--ink);color:var(--paper);
+  font-size:13px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);
+  transition:background .2s ease,color .2s ease;
+}
+.btn:hover{background:transparent;color:var(--ink)}
+.dark .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.dark .btn:hover{background:transparent;color:var(--paper)}
 
-/* ---- wins ---- */
-.wins{display:grid;gap:16px;margin-top:clamp(30px,5vw,52px)}
-@media(min-width:900px){.wins{grid-template-columns:repeat(3,1fr)}}
-.win{border:1px solid var(--rule);padding:clamp(24px,3vw,32px);background:var(--ink-2);display:flex;flex-direction:column}
-.win-tag{display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding-bottom:16px;border-bottom:1px solid var(--rule)}
-.win blockquote{margin:20px 0 0;font-size:16px;line-height:1.6;color:rgba(239,237,232,.9);flex:1}
-.win cite{display:block;margin-top:20px;font-style:normal;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,237,232,.42)}
+/* ---- editorial two-column row ---- */
+.row{display:grid;gap:clamp(24px,4vw,64px)}
+@media(min-width:900px){.row{grid-template-columns:minmax(210px,1fr) 2.1fr}}
+.row h2{font-size:clamp(28px,3.6vw,50px);max-width:16ch}
+.row .body{font-size:clamp(17px,1.5vw,20px);line-height:1.6;max-width:60ch;color:#3A3B3D}
+.dark .row .body{color:rgba(242,240,236,.74)}
+
+/* ---- quotes ---- */
+.quotes{display:grid;gap:0;margin-top:clamp(34px,5vw,58px);border-top:1px solid var(--line-light)}
+.quote{padding:clamp(26px,3vw,40px) 0;border-bottom:1px solid var(--line-light);display:grid;gap:16px}
+@media(min-width:900px){.quote{grid-template-columns:minmax(210px,1fr) 2.1fr;gap:clamp(24px,4vw,64px);align-items:start}}
+.quote blockquote{margin:0;font-size:clamp(19px,2vw,26px);line-height:1.42;max-width:44ch}
+.quote .who{display:flex;flex-direction:column;gap:6px}
+
+/* ---- stats strip ---- */
+.strip{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line-light)}
+@media(min-width:760px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip div{padding:clamp(22px,3vw,34px) 0;border-bottom:1px solid var(--line-light)}
+@media(min-width:760px){.strip div + div{padding-left:clamp(18px,2.4vw,34px);border-left:1px solid var(--line-light)}}
+.strip b{display:block;font-size:clamp(28px,3.2vw,42px);font-weight:600;letter-spacing:-.02em;line-height:1}
+.strip span{display:block;margin-top:10px}
 
 /* ---- services ---- */
-.cards{display:grid;gap:16px;margin-top:clamp(30px,5vw,52px)}
-@media(min-width:820px){.cards{grid-template-columns:repeat(3,1fr)}}
-.card{border:1px solid var(--rule);background:var(--ink-2);display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s ease}
-.card:hover{border-color:var(--gold)}
-.card-img{position:relative;aspect-ratio:4/3;overflow:hidden}
-.card-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35);transition:transform .5s ease,filter .5s ease}
-.card:hover .card-img img{transform:scale(1.05);filter:grayscale(0)}
-.card-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(13,13,16,.95))}
-.card-img .no{position:absolute;left:16px;top:14px;z-index:2;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.28em;color:var(--gold)}
-.card-body{padding:clamp(22px,3vw,30px);display:flex;flex-direction:column;flex:1}
-.card h3{font-size:clamp(30px,3.4vw,40px);margin-bottom:12px}
-.card p{margin:0;color:rgba(239,237,232,.6);font-size:15px}
-.card ul{margin:20px 0 0;padding:0;list-style:none;font-size:14px;color:rgba(239,237,232,.75)}
-.card li{padding:9px 0 9px 20px;position:relative;border-top:1px solid var(--rule)}
-.card li::before{content:"";position:absolute;left:0;top:16px;width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg)}
-.card .quote-line{margin-top:auto;padding-top:22px;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.svc{border-top:1px solid var(--line-light)}
+.svc-item{
+  display:grid;gap:14px;padding:clamp(26px,3.2vw,44px) 0;border-bottom:1px solid var(--line-light);
+  align-items:start;
+}
+@media(min-width:900px){.svc-item{grid-template-columns:60px minmax(200px,1fr) 1.5fr auto;gap:clamp(20px,3vw,48px)}}
+.svc-item h3{font-size:clamp(24px,2.6vw,34px)}
+.svc-item p{margin:0;color:#3A3B3D;max-width:46ch}
+.svc-item .price{white-space:nowrap;color:var(--grey);font-size:14px}
 
 /* ---- before / after ---- */
-.ba{position:relative;margin-top:clamp(30px,5vw,52px);border:1px solid var(--rule);overflow:hidden;aspect-ratio:16/10;user-select:none;background:var(--ink-2)}
-@media(min-width:760px){.ba{aspect-ratio:16/8}}
+.ba{position:relative;overflow:hidden;aspect-ratio:16/10;user-select:none;background:var(--ink-soft)}
+@media(min-width:760px){.ba{aspect-ratio:2/1}}
 .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ba .after{clip-path:inset(0 0 0 50%)}
-.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);z-index:4;transform:translateX(-1px);pointer-events:none}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--paper);z-index:4;pointer-events:none}
 .ba-handle::after{
-  content:"";position:absolute;top:50%;left:50%;width:48px;height:48px;
-  transform:translate(-50%,-50%) rotate(45deg);border:2px solid var(--gold);background:rgba(8,8,10,.45);
+  content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;
+  transform:translate(-50%,-50%);border:1px solid var(--paper);
 }
-.ba-cap{position:absolute;left:0;right:0;bottom:0;z-index:5;display:flex;justify-content:space-between;padding:14px 16px;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;background:linear-gradient(transparent,rgba(8,8,10,.9));pointer-events:none}
-.ba-drag{position:absolute;left:50%;top:18px;transform:translateX(-50%);z-index:5;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding:8px 14px;border:1px solid var(--gold);background:rgba(8,8,10,.55);pointer-events:none}
+.ba-cap{position:absolute;left:0;right:0;bottom:0;z-index:5;display:flex;justify-content:space-between;padding:16px 18px;pointer-events:none;color:var(--paper)}
 .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:6;margin:0}
-.demo-note{margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,237,232,.35)}
-
-/* ---- macro divider + owner quote ---- */
-.slab{position:relative;min-height:clamp(280px,42vw,460px);display:grid;place-items:center;text-align:center;overflow:hidden;padding-inline:var(--pad)}
-.slab img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.slab::after{content:"";position:absolute;inset:0;background:rgba(8,8,10,.72)}
-.slab .inner{position:relative;z-index:3}
-.slab p{font-family:"Big Shoulders Display",sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(38px,9vw,116px);line-height:.86;margin:0}
-.slab p span{color:var(--gold)}
-.slab cite{display:block;margin-top:24px;font-style:normal;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,237,232,.5)}
-
-/* ---- contact ---- */
-.contact-grid{display:grid;gap:clamp(24px,4vw,52px);margin-top:clamp(30px,5vw,52px)}
-@media(min-width:940px){.contact-grid{grid-template-columns:1fr 1fr}}
-.big-call{display:flex;flex-direction:column;gap:10px;border:1px solid var(--gold);padding:clamp(26px,4vw,38px);text-decoration:none;background:rgba(217,180,74,.06);transition:background .22s ease}
-.big-call:hover{background:rgba(217,180,74,.14)}
-.big-call b{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:clamp(40px,6vw,64px);line-height:.86;color:var(--gold)}
-.facts{margin:26px 0 0;padding:0;list-style:none}
-.facts li{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-top:1px solid var(--rule);font-size:14px;color:rgba(239,237,232,.75)}
-.facts li span:first-child{font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(239,237,232,.4)}
-form{display:grid;gap:14px}
-label{font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:9px}
-input,select,textarea{
-  width:100%;padding:15px 16px;background:rgba(239,237,232,.04);
-  border:1px solid var(--rule);color:var(--paper);font:400 15px Archivo,sans-serif;border-radius:0;
-}
-input:focus,select:focus,textarea:focus{border-color:var(--gold)}
-select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 20px) 22px,calc(100% - 14px) 22px;background-size:6px 6px;background-repeat:no-repeat}
-select option{background:var(--ink)}
-textarea{resize:vertical;min-height:110px}
-.form-note{font-size:12px;color:rgba(239,237,232,.4);margin:0}
-
-/* ---- footer + call bar ---- */
-footer{border-top:1px solid var(--rule);padding-block:clamp(44px,6vw,68px) calc(clamp(44px,6vw,68px) + env(safe-area-inset-bottom))}
-.foot-row{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-end}
-.foot-row p{margin:0;font-size:12px;color:rgba(239,237,232,.4)}
-.foot-row a{color:var(--gold)}
-@media(max-width:879px){footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}}
-.callbar{
-  position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
-  background:var(--gold);color:var(--ink);text-decoration:none;
-  align-items:center;justify-content:center;gap:12px;
-  padding:16px 20px calc(16px + env(safe-area-inset-bottom));
-  font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
-}
-@media(min-width:880px){.callbar{display:none}}
 
 /* ---- gallery ---- */
-.grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:clamp(30px,5vw,52px)}
-@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr);gap:14px}}
-.tile{position:relative;overflow:hidden;border:1px solid var(--rule);aspect-ratio:4/3;background:var(--ink-2)}
-.tile img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4) contrast(1.05);transition:transform .6s cubic-bezier(.2,.7,.3,1),filter .6s ease}
-.tile:hover img{transform:scale(1.06);filter:grayscale(0) contrast(1.05)}
-.tile figcaption{
-  position:absolute;left:0;right:0;bottom:0;padding:12px 14px;z-index:2;
-  font-family:var(--mono);font-weight:600;font-size:9px;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(239,237,232,.9);background:linear-gradient(transparent,rgba(8,8,10,.9));
-}
+.grid{display:grid;gap:2px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}
+.tile{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--ink-soft);margin:0}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.tile:hover img{transform:scale(1.04)}
+.tile figcaption{position:absolute;left:0;bottom:0;padding:12px 14px;color:var(--paper);text-shadow:0 1px 12px rgba(0,0,0,.6)}
 .tile.tall{aspect-ratio:3/4}
 @media(min-width:900px){.tile.tall{grid-row:span 2;aspect-ratio:auto}}
 
-/* ---- cal.com style booking ---- */
-.cal{border:1px solid var(--rule);background:var(--ink-2);display:grid;margin-top:clamp(30px,5vw,52px)}
-@media(min-width:900px){.cal{grid-template-columns:minmax(240px,.85fr) 1.35fr minmax(180px,.7fr)}}
-.cal-col{padding:clamp(20px,2.6vw,30px)}
-.cal-col + .cal-col{border-top:1px solid var(--rule)}
-@media(min-width:900px){.cal-col + .cal-col{border-top:0;border-left:1px solid var(--rule)}}
-.cal-brand{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--rule)}
-.cal-avatar{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;background:var(--gold);color:var(--ink);font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:20px;line-height:1}
-.cal-brand b{display:block;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(239,237,232,.5)}
-.cal-brand span{font-size:15px}
-.cal-title{font-family:"Big Shoulders Display",sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(28px,3vw,38px);line-height:.9;margin:20px 0 16px}
-.cal-meta{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.cal-meta li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(239,237,232,.72)}
-.cal-meta li svg{flex:0 0 15px;margin-top:3px;stroke:var(--gold);fill:none;stroke-width:1.7}
-.cal-dur{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+/* ---- pull quote slab ---- */
+.slab{position:relative;min-height:clamp(320px,48vw,560px);display:grid;place-items:center;text-align:center;overflow:hidden;padding:clamp(60px,8vw,110px) var(--pad)}
+.slab img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slab::after{content:"";position:absolute;inset:0;background:rgba(11,11,12,.62)}
+.slab .inner{position:relative;z-index:3;color:var(--paper);max-width:19ch}
+.slab p{font-size:clamp(30px,5.2vw,72px);line-height:1.04;margin:0}
+.slab cite{display:block;margin-top:26px;font-style:normal}
+
+/* ---- booking (cal.com preview) ---- */
+.cal{border:1px solid var(--line-light);background:#fff;display:grid;margin-top:clamp(30px,4vw,48px)}
+@media(min-width:920px){.cal{grid-template-columns:minmax(250px,.9fr) 1.3fr minmax(190px,.7fr)}}
+.cal-col{padding:clamp(22px,2.6vw,34px)}
+.cal-col + .cal-col{border-top:1px solid var(--line-light)}
+@media(min-width:920px){.cal-col + .cal-col{border-top:0;border-left:1px solid var(--line-light)}}
+.cal-brand{display:flex;align-items:center;gap:12px}
+.cal-avatar{width:38px;height:38px;flex:0 0 38px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-size:14px;font-weight:600}
+.cal-brand b{display:block;font-weight:500;font-size:15px}
+.cal-title{font-size:clamp(24px,2.4vw,32px);font-weight:600;text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin:22px 0 18px}
+.cal-meta{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.cal-meta li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#3A3B3D}
+.cal-meta li svg{flex:0 0 15px;margin-top:4px;stroke:var(--ink);fill:none;stroke-width:1.5}
+.cal-dur{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
 .cal-dur button{
-  background:transparent;color:rgba(239,237,232,.7);border:1px solid var(--rule);
-  padding:9px 13px;cursor:pointer;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  background:transparent;color:#3A3B3D;border:1px solid var(--line-light);
+  padding:9px 14px;cursor:pointer;font:inherit;font-size:13px;
 }
-.cal-dur button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);background:rgba(217,180,74,.09)}
-
-.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-.cal-head strong{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.cal-dur button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink)}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.cal-head strong{font-weight:500;font-size:15px}
 .cal-nav{display:flex;gap:6px}
-.cal-nav button{width:32px;height:32px;background:transparent;border:1px solid var(--rule);color:var(--paper);cursor:pointer;line-height:1}
-.cal-nav button:hover{border-color:var(--gold);color:var(--gold)}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
-.cal-dow{font-family:var(--mono);font-weight:600;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(239,237,232,.35);text-align:center;padding-bottom:6px}
+.cal-nav button{width:30px;height:30px;background:transparent;border:1px solid var(--line-light);cursor:pointer;line-height:1;font:inherit}
+.cal-nav button:hover{border-color:var(--ink)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-dow{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);text-align:center;padding-bottom:6px}
 .cal-day{
-  aspect-ratio:1;display:grid;place-items:center;border:1px solid transparent;background:rgba(239,237,232,.045);
-  color:rgba(239,237,232,.85);font-family:var(--mono);font-weight:600;font-size:12px;cursor:pointer;position:relative;
+  aspect-ratio:1;display:grid;place-items:center;border:1px solid transparent;background:var(--paper-2);
+  color:var(--ink);font:inherit;font-size:14px;cursor:pointer;position:relative;
 }
-.cal-day:hover:not(:disabled){border-color:var(--gold);color:var(--gold)}
-.cal-day:disabled{background:transparent;color:rgba(239,237,232,.18);cursor:default}
-.cal-day[aria-pressed="true"]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.cal-day.has::after{content:"";position:absolute;bottom:6px;width:3px;height:3px;border-radius:50%;background:var(--gold)}
-.cal-day[aria-pressed="true"].has::after{background:var(--ink)}
-
-.cal-slots{display:grid;gap:7px;max-height:330px;overflow:auto}
-.cal-slot{
-  padding:12px;background:transparent;border:1px solid var(--rule);color:var(--paper);cursor:pointer;
-  font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.1em;text-align:center;
-}
-.cal-slot:hover{border-color:var(--gold);color:var(--gold)}
-.cal-slot[aria-pressed="true"]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.cal-day:hover:not(:disabled){border-color:var(--ink)}
+.cal-day:disabled{background:transparent;color:rgba(11,11,12,.2);cursor:default}
+.cal-day[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.cal-slots{display:grid;gap:6px;max-height:320px;overflow:auto}
+.cal-slot{padding:12px;background:transparent;border:1px solid var(--line-light);cursor:pointer;font:inherit;font-size:14px;text-align:center}
+.cal-slot:hover{border-color:var(--ink)}
+.cal-slot[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .cal-confirm{width:100%;margin-top:12px}
-.cal-confirm:disabled{opacity:.35;cursor:not-allowed}
-.cal-done{border:1px solid var(--gold);background:rgba(217,180,74,.08);padding:18px;font-size:14px;color:rgba(239,237,232,.85)}
-.cal-done b{display:block;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.cal-foot{
-  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
-  border-top:1px solid var(--rule);padding:14px clamp(20px,2.6vw,30px);
-  font-family:var(--mono);font-weight:600;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(239,237,232,.35);
+.cal-confirm:disabled{opacity:.3;cursor:not-allowed}
+.cal-done{border:1px solid var(--line-light);padding:18px;font-size:15px;color:#3A3B3D;background:var(--paper-2)}
+.cal-done b{display:block;font-weight:600;color:var(--ink);margin-bottom:8px}
+.cal-note{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;margin-top:14px}
+
+/* ---- contact + footer ---- */
+.contact{display:grid;gap:clamp(22px,3vw,44px)}
+@media(min-width:900px){.contact{grid-template-columns:1.2fr 1fr;align-items:end}}
+.tel-big{display:inline-block;text-decoration:none;font-size:clamp(34px,5.4vw,74px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.tel-big:hover{opacity:.62}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-light)}
+.facts li{display:flex;justify-content:space-between;gap:24px;padding:14px 0;border-bottom:1px solid var(--line-light);font-size:15px}
+footer{border-top:1px solid var(--line-light);padding:clamp(30px,4vw,44px) 0 calc(clamp(30px,4vw,44px) + env(safe-area-inset-bottom))}
+.foot-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+@media(max-width:899px){footer{padding-bottom:calc(92px + env(safe-area-inset-bottom))}}
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
+  background:var(--ink);color:var(--paper);text-decoration:none;
+  align-items:center;justify-content:center;gap:10px;
+  padding:16px 20px calc(16px + env(safe-area-inset-bottom));
+  font-size:13px;letter-spacing:.12em;text-transform:uppercase;
 }
+@media(min-width:900px){.callbar{display:none}}
 
-/* ---- reveal: visible by default, armed only when JS confirms ---- */
+/* ---- reveal ---- */
 .reveal{opacity:1;transform:none}
-.js .reveal{opacity:0;transform:translate3d(0,22px,0);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.js .reveal{opacity:0;transform:translate3d(0,16px,0);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
 .js .reveal.in{opacity:1;transform:none}
-
 @media(prefers-reduced-motion:reduce){
-  .ticker-track{animation:none}
   .js .reveal{opacity:1;transform:none;transition:none}
   *{transition-duration:.01ms!important}
 }
@@ -356,245 +273,193 @@ footer{border-top:1px solid var(--rule);padding-block:clamp(44px,6vw,68px) calc(
 window.addEventListener('error',function(){document.documentElement.classList.remove('js');},{once:true});</script>
 
 <a class="skip" href="#main">Skip to content</a>
-<div class="rail" aria-hidden="true"><span>Undefeated <b>Detailing</b></span></div>
-
-<header class="nav">
-  <a class="mark" href="#top">Undefeated <span class="gold">Detailing</span></a>
-  <nav class="links" aria-label="Primary">
-    <a href="#record">The Record</a>
-    <a href="#services">The Card</a>
-    <a href="#work">The Work</a>
-    <a href="#book">Book</a>
-  </nav>
-  <a class="btn btn-solid btn-sm" href="tel:+19092053009" aria-label="Call Undefeated Detailing at 909-205-3009">909-205-3009</a>
-</header>
 
 <main id="main">
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
+  <header class="nav">
+    <a class="mark" href="#top">Undefeated Detailing</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Book</a>
+    </nav>
+    <a class="tel" href="tel:+19092053009">909 205 3009</a>
+  </header>
+
   <div class="hero-media">
-    <!-- SWAP: the owner's own footage. Stock clip (Mixkit, licence-free) until then. -->
-    <video id="hero-video" poster="img/hero-poster.jpg" autoplay muted loop playsinline preload="none" aria-hidden="true">
+    <!-- SWAP: the owner's own footage -->
+    <video id="hero-video" poster="img/hero-poster.jpg" muted loop playsinline preload="none" aria-hidden="true">
       <source src="video/hero.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="reticle" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
 
   <div class="wrap">
-    <div class="hero-head">
-      <span class="chip" id="status" data-state="open"><span class="dot"></span><span id="status-text">Open — closes 7 PM</span></span>
-      <span class="chip"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
-    </div>
-
-    <h1>Undefeated<span class="l2">Detailing</span></h1>
-
-    <p class="hero-sub">Three fights. Three wins. <em>Zero losses.</em> A perfect record on Google, earned one car at a time — treated like it belongs to us.</p>
-
-    <div class="hero-cta">
-      <a class="btn btn-solid" href="tel:+19092053009">Call — 909-205-3009</a>
-      <a class="btn btn-ghost" href="#book">Get a quote</a>
+    <h1>Detailing done<span class="serif">like the car is ours.</span></h1>
+    <div class="hero-foot">
+      <p>Auto detailing in Southern California. Every car that has been through us has come back rated five out of five.</p>
+      <a class="link" href="#book">Book a slot <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>3–0 <b>·</b> Zero losses <b>·</b> 5.0 on Google <b>·</b> Treated like it's ours <b>·</b> 3–0 <b>·</b> Zero losses <b>·</b> 5.0 on Google <b>·</b> Treated like it's ours <b>·</b> </span>
-    <span>3–0 <b>·</b> Zero losses <b>·</b> 5.0 on Google <b>·</b> Treated like it's ours <b>·</b> 3–0 <b>·</b> Zero losses <b>·</b> 5.0 on Google <b>·</b> Treated like it's ours <b>·</b> </span>
-  </div>
-</div>
-
-<!-- ================= THE RECORD ================= -->
-<section id="record" class="defer">
+<!-- ================= INTRO + STATS ================= -->
+<section class="defer">
   <div class="wrap">
-    <p class="label gold reveal">Tale of the tape</p>
-    <h2 class="reveal" style="font-size:clamp(40px,7vw,88px);margin-top:16px">Nobody has<br>beaten us yet.</h2>
-
-    <div class="tape reveal">
-      <div><b data-scramble>3–0</b><span>Reviewed · won</span></div>
-      <div><b>5.0</b><span>Google rating</span></div>
-      <div><b>0</b><span>Losses</span></div>
-      <div><b>909</b><span>Call anytime<!-- CONFIRM: full weekly hours --></span></div>
+    <div class="row reveal">
+      <p class="meta">The work</p>
+      <div>
+        <h2>A car does not need to be new to look like it.</h2>
+        <p class="body" style="margin-top:24px">Wash, decontaminate, correct, protect — inside and out, by hand, at the pace the paint needs. No conveyor, no queue, no shortcuts taken because the next car is waiting.</p>
+      </div>
     </div>
 
-    <p class="label reveal" style="margin-top:clamp(48px,7vw,78px);color:rgba(239,237,232,.42)">Every win on record — in their words, not ours</p>
-
-    <div class="wins">
-      <article class="win reveal">
-        <div class="win-tag"><span>Win 01</span><span class="stars" aria-label="5 out of 5">★★★★★</span></div>
-        <blockquote>“By far the best car detailers I have ever worked with, very professional, and they take care of my car. They treat your car like if it is their own. You're in good hands when you work with them!”</blockquote>
-        <cite>Richard Hung · Google review</cite>
-      </article>
-      <article class="win reveal">
-        <div class="win-tag"><span>Win 02</span><span class="stars" aria-label="5 out of 5">★★★★★</span></div>
-        <blockquote>“Amazing detailing business always on time and never falls short of what you expect over and beyond”</blockquote>
-        <cite>Hens · Google review</cite>
-      </article>
-      <article class="win reveal">
-        <div class="win-tag"><span>Win 03</span><span class="stars" aria-label="5 out of 5">★★★★★</span></div>
-        <blockquote>“Best In The Business”</blockquote>
-        <cite>West DAWG · Google review</cite>
-      </article>
+    <div class="strip reveal" style="margin-top:clamp(48px,7vw,86px)">
+      <div><b>5.0</b><span class="meta">Google rating</span></div>
+      <div><b>100%</b><span class="meta">Five-star reviews</span></div>
+      <div><b>909</b><span class="meta">Southern California<!-- CONFIRM: service area --></span></div>
+      <div><b>7pm</b><span class="meta">Open until<!-- CONFIRM: weekly hours --></span></div>
     </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES =================
-     CONFIRM: services offered. Structure is placeholder — no specialties,
-     packages, turnaround times or guarantees claimed. CONFIRM: pricing. -->
-<section id="services" class="defer">
-  <div class="wrap">
-    <p class="label gold reveal">The card</p>
-    <h2 class="reveal" style="font-size:clamp(40px,7vw,88px);margin-top:16px">Pick the<br><span class="gold">fight.</span></h2>
-    <p class="reveal" style="max-width:52ch;color:rgba(239,237,232,.6);margin-top:20px">Every vehicle gets quoted on what's actually in front of us — condition, size, how long it's been. No fixed menu price that ignores the car.</p>
-
-    <div class="cards">
-      <article class="card reveal">
-        <div class="card-img"><span class="no">01</span><img src="img/interior.jpg" alt="Detailer cleaning a vehicle interior" width="1200" height="900" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Interior</h3>
-          <p>Everything you touch, sit on and breathe — brought back.</p>
-          <ul><li>Full vacuum &amp; extraction</li><li>Surfaces, vents, crevices</li><li>Glass, inside out</li></ul>
-          <p class="quote-line">Quote on the vehicle</p>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-img"><span class="no">02</span><img src="img/foam.jpg" alt="Car covered in wash foam" width="1200" height="900" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Exterior</h3>
-          <p>Wash, decontaminate, protect. The finish people see first.</p>
-          <ul><li>Hand wash &amp; dry</li><li>Wheels, tires, arches</li><li>Paint protection applied</li></ul>
-          <p class="quote-line">Quote on the vehicle</p>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-img"><span class="no">03</span><img src="img/polish.jpg" alt="Detailer machine polishing a car panel" width="1200" height="900" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3>Full Detail</h3>
-          <p>Inside and out, in one round. The one that gets the reviews.</p>
-          <ul><li>Complete interior</li><li>Complete exterior</li><li>Final walk-through with you</li></ul>
-          <p class="quote-line">Quote on the vehicle</p>
-        </div>
-      </article>
-    </div>
-
-    <p class="reveal" style="margin-top:26px;font-size:13px;color:rgba(239,237,232,.4)">Something bigger, older or rougher than the list? Call it in — 909-205-3009.</p>
   </div>
 </section>
 
 <!-- ================= BEFORE / AFTER ================= -->
 <section id="work" class="defer" style="padding-top:0">
   <div class="wrap">
-    <p class="label gold reveal">The work</p>
-    <h2 class="reveal" style="font-size:clamp(40px,7vw,88px);margin-top:16px">Before is the<br>opponent.</h2>
-
     <div class="ba reveal" id="ba">
-      <div class="reticle" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
       <!-- SWAP: the owner's own before/after pair -->
       <img src="img/ba-before.jpg" alt="Alloy wheel caked in dirt and brake dust before detailing" width="2000" height="1250" loading="lazy" decoding="async">
-      <img class="after" id="ba-after" src="img/ba-after.jpg" alt="The same style of alloy wheel cleaned back to a bright finish" width="2000" height="1250" loading="lazy" decoding="async">
-      <span class="ba-drag">Drag to see the damage</span>
+      <img class="after" id="ba-after" src="img/ba-after.jpg" alt="The same wheel cleaned back to a bright finish" width="2000" height="1250" loading="lazy" decoding="async">
       <div class="ba-handle" id="ba-handle"></div>
-      <div class="ba-cap"><span class="gold">Before</span><span>After</span></div>
+      <div class="ba-cap"><span class="meta" style="color:inherit">Before</span><span class="meta" style="color:inherit">After</span></div>
       <input class="ba-range" type="range" id="ba-range" min="0" max="100" value="50" aria-label="Reveal amount, before and after">
     </div>
-    <p class="demo-note">Demo imagery — swapped for Undefeated's own jobs before launch</p>
+    <p class="meta" style="margin-top:14px">Drag to compare · demo imagery, replaced with Undefeated's own work before launch</p>
+  </div>
 
-    <div class="grid">
-      <!-- SWAP: the owner's own job photos -->
-      <figure class="tile tall reveal">
-        <img src="img/work-1.jpg" alt="Front corner of a black car after paint correction" width="1200" height="1500" loading="lazy" decoding="async">
-        <figcaption>Paint · corrected</figcaption>
-      </figure>
-      <figure class="tile reveal">
-        <img src="img/work-2.jpg" alt="Machine polisher working a panel" width="1200" height="900" loading="lazy" decoding="async">
-        <figcaption>Machine polish</figcaption>
-      </figure>
-      <figure class="tile reveal">
-        <img src="img/work-3.jpg" alt="Foam on black paintwork, macro" width="1200" height="900" loading="lazy" decoding="async">
-        <figcaption>Decontamination</figcaption>
-      </figure>
-      <figure class="tile reveal">
-        <img src="img/work-4.jpg" alt="Detailer cleaning a car interior" width="1200" height="900" loading="lazy" decoding="async">
-        <figcaption>Interior · by hand</figcaption>
-      </figure>
-      <figure class="tile reveal">
-        <img src="img/foam.jpg" alt="Car covered in wash foam" width="1400" height="1050" loading="lazy" decoding="async">
-        <figcaption>Contact wash</figcaption>
-      </figure>
-      <figure class="tile reveal">
-        <img src="img/polish.jpg" alt="Detailer polishing a red panel" width="1400" height="1050" loading="lazy" decoding="async">
-        <figcaption>Finish · inspected</figcaption>
-      </figure>
-      <figure class="tile reveal">
-        <img src="img/work-5.jpg" alt="Polisher head working a dark panel edge" width="1200" height="900" loading="lazy" decoding="async">
-        <figcaption>Swirls · removed</figcaption>
-      </figure>
+  <div class="grid reveal" style="margin-top:clamp(48px,7vw,88px)">
+    <!-- SWAP: the owner's own job photos -->
+    <figure class="tile tall"><img src="img/work-1.jpg" alt="Front corner of a black car after paint correction" width="1200" height="1500" loading="lazy" decoding="async"></figure>
+    <figure class="tile"><img src="img/work-2.jpg" alt="Machine polisher working a panel" width="1200" height="900" loading="lazy" decoding="async"></figure>
+    <figure class="tile"><img src="img/work-3.jpg" alt="Foam on black paintwork" width="1200" height="900" loading="lazy" decoding="async"></figure>
+    <figure class="tile"><img src="img/work-4.jpg" alt="Detailer cleaning a car interior" width="1200" height="900" loading="lazy" decoding="async"></figure>
+    <figure class="tile"><img src="img/foam.jpg" alt="Car covered in wash foam" width="1400" height="1050" loading="lazy" decoding="async"></figure>
+    <figure class="tile"><img src="img/polish.jpg" alt="Detailer polishing a panel" width="1400" height="1050" loading="lazy" decoding="async"></figure>
+    <figure class="tile"><img src="img/work-5.jpg" alt="Polisher head working a dark panel edge" width="1200" height="900" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- ================= SERVICES =================
+     CONFIRM: services offered — placeholder structure, no specialties,
+     packages, turnaround times or guarantees claimed. CONFIRM: pricing. -->
+<section id="services" class="defer">
+  <div class="wrap">
+    <div class="row reveal">
+      <p class="meta">Services</p>
+      <div>
+        <h2>Three ways in.</h2>
+        <p class="body" style="margin-top:24px">Every vehicle is quoted on what is actually in front of us — condition, size, how long it has been. A fixed menu price would only ignore the car.</p>
+      </div>
+    </div>
+
+    <div class="svc reveal" style="margin-top:clamp(40px,6vw,72px)">
+      <article class="svc-item">
+        <p class="meta">01</p>
+        <h3>Interior</h3>
+        <p>Vacuum and extraction throughout, every surface, vent and crevice worked by hand, glass finished inside and out.</p>
+        <p class="price">Quote on the vehicle</p>
+      </article>
+      <article class="svc-item">
+        <p class="meta">02</p>
+        <h3>Exterior</h3>
+        <p>Contact wash, decontamination, wheels and arches, then protection laid down on clean paint rather than over the dirt.</p>
+        <p class="price">Quote on the vehicle</p>
+      </article>
+      <article class="svc-item">
+        <p class="meta">03</p>
+        <h3>Full detail</h3>
+        <p>Everything above in one visit, finished with a walk-round together so nothing gets signed off that you have not seen.</p>
+        <p class="price">Quote on the vehicle</p>
+      </article>
+    </div>
+
+    <p class="meta" style="margin-top:24px">Bigger, older or rougher than the list? Call it in — 909 205 3009.</p>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews" class="dark defer">
+  <div class="wrap">
+    <div class="row reveal">
+      <p class="meta">Reviews</p>
+      <div>
+        <h2>Three customers. Three five-star reviews.</h2>
+      </div>
+    </div>
+
+    <div class="quotes" style="border-color:var(--line-dark)">
+      <article class="quote reveal" style="border-color:var(--line-dark)">
+        <div class="who"><span class="meta">Richard Hung</span><span class="meta">Google · five stars</span></div>
+        <blockquote>“By far the best car detailers I have ever worked with, very professional, and they take care of my car. They treat your car like if it is their own. You're in good hands when you work with them!”</blockquote>
+      </article>
+      <article class="quote reveal" style="border-color:var(--line-dark)">
+        <div class="who"><span class="meta">Hens</span><span class="meta">Google · five stars</span></div>
+        <blockquote>“Amazing detailing business always on time and never falls short of what you expect over and beyond”</blockquote>
+      </article>
+      <article class="quote reveal" style="border-color:var(--line-dark)">
+        <div class="who"><span class="meta">West DAWG</span><span class="meta">Google · five stars</span></div>
+        <blockquote>“Best In The Business”</blockquote>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ================= OWNER QUOTE ================= -->
-<section class="slab defer" style="padding-block:clamp(80px,12vw,150px)">
+<!-- ================= PULL QUOTE ================= -->
+<section class="slab defer" style="padding-block:0">
   <img src="img/slab.jpg" alt="" width="2000" height="1000" loading="lazy" decoding="async">
   <div class="inner">
-    <p class="reveal">We aim to be <span>undefeated.</span></p>
-    <cite class="reveal">— the owner, replying to a customer review</cite>
+    <p class="reveal serif">We aim to be undefeated.</p>
+    <cite class="meta reveal" style="color:rgba(242,240,236,.6)">The owner, replying to a customer review</cite>
   </div>
 </section>
 
 <!-- ================= BOOK ================= -->
 <section id="book" class="defer">
   <div class="wrap">
-    <p class="label gold reveal">Book it</p>
-    <h2 class="reveal" style="font-size:clamp(40px,7vw,88px);margin-top:16px">Bring<br>it in.</h2>
-
-    <div class="contact-grid" style="grid-template-columns:1fr;gap:clamp(20px,3vw,28px)">
-      <div class="reveal" style="display:grid;gap:16px;grid-template-columns:1fr">
-        <a class="big-call" href="tel:+19092053009">
-          <span class="label" style="color:rgba(239,237,232,.5)">Fastest way — tap to call</span>
-          <b>909-205-3009</b>
-        </a>
-        <ul class="facts" style="margin:0">
-          <li><span>Hours</span><span>Closes 7:00 PM<!-- CONFIRM: full weekly hours --></span></li>
-          <li><span>Area</span><span>909 · Southern California<!-- CONFIRM: exact cities served --></span></li>
-          <li><span>Rating</span><span>5.0 on Google · 3 reviews</span></li>
-        </ul>
+    <div class="contact reveal">
+      <div>
+        <p class="meta">Book it</p>
+        <a class="tel-big" href="tel:+19092053009">909 205 3009</a>
       </div>
+      <ul class="facts">
+        <li><span class="meta">Hours</span><span>Open until 7pm<!-- CONFIRM: weekly hours --></span></li>
+        <li><span class="meta">Area</span><span>909 · Southern California<!-- CONFIRM: cities --></span></li>
+        <li><span class="meta">Rating</span><span>5.0 on Google · 3 reviews</span></li>
+      </ul>
     </div>
 
     <!-- =========================================================
-         BOOKING — Cal.com preview.
-         This is a visual mock of the real Cal.com booking flow so the
-         owner can see exactly how it behaves. It does NOT take real
-         bookings yet.
-         CONFIRM: Cal.com account + event types, real availability
-         (the slots below are illustrative), buffer times, deposit rules.
-         Going live = create the event type on Cal.com and drop in the
-         embed snippet in place of this block. Nothing else changes.
+         Cal.com booking preview — a visual mock of the real flow so the
+         owner can see how it behaves. Takes no real bookings.
+         Going live = create the event type on Cal.com and drop the embed
+         in place of this block. Nothing else on the page changes.
+         CONFIRM: account, event types, availability, buffers, deposits.
          ========================================================= -->
-    <p class="label gold reveal" style="margin-top:clamp(48px,7vw,80px)">Or book yourself in</p>
-    <h3 class="reveal" style="font-size:clamp(30px,4.4vw,54px);margin-top:14px">Pick a day.<br>Pick a time. Done.</h3>
-
     <div class="cal reveal" id="cal">
       <div class="cal-col">
         <div class="cal-brand">
-          <span class="cal-avatar" aria-hidden="true">U</span>
-          <span><b>Undefeated Detailing</b><span>909-205-3009</span></span>
+          <span class="cal-avatar" aria-hidden="true">UD</span>
+          <span><b>Undefeated Detailing</b><span class="meta">909 205 3009</span></span>
         </div>
-
-        <p class="cal-title">Detail<br>booking</p>
-
+        <p class="cal-title">Detail booking</p>
         <ul class="cal-meta">
           <li><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="cal-duration-label">60 min</span></li>
-          <li><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Phone call to confirm the vehicle</span></li>
-          <li><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>909 · Southern California<!-- CONFIRM: service area --></span></li>
+          <li><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Call to confirm the vehicle</span></li>
+          <li><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>909 · Southern California</span></li>
           <li><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg><span>America/Los_Angeles</span></li>
         </ul>
-
         <div class="cal-dur" role="group" aria-label="Appointment length">
           <button type="button" data-dur="30">30 min</button>
           <button type="button" data-dur="60" aria-pressed="true">60 min</button>
@@ -617,13 +482,13 @@ window.addEventListener('error',function(){document.documentElement.classList.re
       <div class="cal-col">
         <div class="cal-head"><strong id="cal-selected">Pick a day</strong></div>
         <div class="cal-slots" id="cal-slots" role="group" aria-label="Choose a time"></div>
-        <button class="btn btn-solid cal-confirm" id="cal-confirm" type="button" disabled>Confirm</button>
+        <button class="btn cal-confirm" id="cal-confirm" type="button" disabled>Confirm</button>
       </div>
     </div>
-    <p class="cal-foot reveal">
-      <span>Preview — real bookings go live once Cal.com is connected</span>
-      <span>Instant confirmation · reminders by text</span>
-    </p>
+    <div class="cal-note">
+      <span class="meta">Preview — live bookings once Cal.com is connected</span>
+      <span class="meta">Instant confirmation · text reminders</span>
+    </div>
   </div>
 </section>
 
@@ -631,16 +496,12 @@ window.addEventListener('error',function(){document.documentElement.classList.re
 
 <footer>
   <div class="wrap foot-row">
-    <div>
-      <p style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:26px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper)">Undefeated <span class="gold">Detailing</span></p>
-      <p style="margin-top:10px">Auto detailing · <a href="tel:+19092053009">909-205-3009</a></p>
-      <!-- CONFIRM: social profiles — omitted until real handles exist. -->
-    </div>
-    <p>&copy; <span id="yr">2026</span> Undefeated Detailing · Site by <a href="https://mvssolves.com" rel="noopener">MVS Solves</a></p>
+    <p class="meta" style="margin:0">Undefeated Detailing · Auto detailing · <a href="tel:+19092053009">909 205 3009</a></p>
+    <p class="meta" style="margin:0">&copy; <span id="yr">2026</span> · Site by <a href="https://mvssolves.com" rel="noopener">MVS Solves</a></p>
   </div>
 </footer>
 
-<a class="callbar" href="tel:+19092053009">Call 909-205-3009</a>
+<a class="callbar" href="tel:+19092053009">Call 909 205 3009</a>
 
 <script type="application/ld+json">
 {
@@ -660,53 +521,14 @@ window.addEventListener('error',function(){document.documentElement.classList.re
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  /* hero video: only fetched once the poster is on screen, never on save-data */
   var v = document.getElementById('hero-video');
   var saveData = navigator.connection && navigator.connection.saveData;
   if (v && !reduced && !saveData) { v.preload = 'auto'; v.load(); var p = v.play(); if (p) p.catch(function () {}); }
 
-  /* live open/closed chip — only the 7 PM close is verified, so that is all it asserts */
-  var chip = document.getElementById('status'), text = document.getElementById('status-text');
-  (function tick() {
-    var now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-    var open = now.getHours() < 19;
-    chip.dataset.state = open ? 'open' : 'closed';
-    text.textContent = open ? 'Open — closes 7 PM' : 'Closed — call tomorrow';
-    setTimeout(tick, 60000);
-  })();
-
-  /* ticker only animates while it is actually on screen */
-  var track = document.querySelector('.ticker-track');
-  if (track && !reduced) {
-    new IntersectionObserver(function (es) {
-      es.forEach(function (e) { track.classList.toggle('run', e.isIntersecting); });
-    }).observe(track);
-  }
-
-  /* reveals */
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px' });
+  }, { rootMargin: '0px 0px -6% 0px' });
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-
-  /* scramble — used once, on the record */
-  var CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789/\\<>*#';
-  new IntersectionObserver(function (es, obs) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      obs.unobserve(e.target);
-      if (reduced) return;
-      var el = e.target, final = el.textContent, f = 0, total = 12;
-      var id = setInterval(function () {
-        f++;
-        var solved = Math.floor(final.length * (f / total));
-        el.textContent = final.slice(0, solved) + final.slice(solved).replace(/\S/g, function () {
-          return CHARS[Math.floor(Math.random() * CHARS.length)];
-        });
-        if (f >= total) { clearInterval(id); el.textContent = final; }
-      }, 32);
-    });
-  }, { threshold: .6 }).observe(document.querySelector('[data-scramble]'));
 
   /* before / after */
   var range = document.getElementById('ba-range'),
@@ -717,11 +539,9 @@ window.addEventListener('error',function(){document.documentElement.classList.re
   set(range.value);
 
   /* ---------------------------------------------------------------
-     Cal.com booking preview.
-     Real calendar maths so the demo behaves like the live embed will:
-     past days are dead, Sundays are closed, everything else offers slots
-     that stop before the 7 PM close. Slots are illustrative only.
-     CONFIRM: real availability, buffers, deposit rules.
+     Cal.com booking preview. Real calendar maths so the demo behaves
+     like the live embed: past days dead, Sundays closed, slots stop
+     before the 7 PM close. Slots are illustrative only.
      --------------------------------------------------------------- */
   var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -750,25 +570,22 @@ window.addEventListener('error',function(){document.documentElement.classList.re
     var out = [], start = 8, close = 19, step = duration >= 180 ? 3 : (duration >= 60 ? 1.5 : 1);
     for (var h = start; h + duration / 60 <= close; h += step) {
       var hh = Math.floor(h), mm = Math.round((h - hh) * 60);
-      /* deterministic thinning so the demo looks like a real, partly-booked week */
       if ((date.getDate() + hh) % 4 === 0) continue;
-      var ampm = hh >= 12 ? 'PM' : 'AM', disp = hh % 12 === 0 ? 12 : hh % 12;
-      out.push(disp + ':' + (mm < 10 ? '0' + mm : mm) + ' ' + ampm);
+      var ampm = hh >= 12 ? 'pm' : 'am', disp = hh % 12 === 0 ? 12 : hh % 12;
+      out.push(disp + ':' + (mm < 10 ? '0' + mm : mm) + ampm);
     }
     return out;
   }
 
   function renderSlots() {
-    slotsEl.innerHTML = '';
-    confirmEl.disabled = true;
-    chosenSlot = null;
+    slotsEl.innerHTML = ''; confirmEl.disabled = true; chosenSlot = null;
     if (!chosenDay) {
-      slotsEl.innerHTML = '<p style="font-size:13px;color:rgba(239,237,232,.4);margin:0">Choose a day to see open times.</p>';
+      slotsEl.innerHTML = '<p class="meta" style="margin:0">Choose a day to see open times.</p>';
       return;
     }
     var list = slotsFor(chosenDay);
     if (!list.length) {
-      slotsEl.innerHTML = '<p style="font-size:13px;color:rgba(239,237,232,.4);margin:0">Fully booked — try the next day, or call.</p>';
+      slotsEl.innerHTML = '<p class="meta" style="margin:0">Fully booked — try the next day, or call.</p>';
       return;
     }
     list.forEach(function (t) {
@@ -787,7 +604,7 @@ window.addEventListener('error',function(){document.documentElement.classList.re
     daysEl.innerHTML = '';
     monthEl.textContent = MONTHS[view.getMonth()] + ' ' + view.getFullYear();
     var first = new Date(view.getFullYear(), view.getMonth(), 1);
-    var lead = (first.getDay() + 6) % 7; /* week starts Monday */
+    var lead = (first.getDay() + 6) % 7;
     var total = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
     for (var i = 0; i < lead; i++) daysEl.appendChild(document.createElement('span'));
     for (var d = 1; d <= total; d++) {
@@ -798,7 +615,6 @@ window.addEventListener('error',function(){document.documentElement.classList.re
       b.setAttribute('aria-label', d + ' ' + MONTHS[view.getMonth()]);
       if (!bookable(date)) { b.disabled = true; }
       else {
-        b.classList.add('has');
         (function (date, b) {
           b.addEventListener('click', function () {
             daysEl.querySelectorAll('.cal-day').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
@@ -824,25 +640,21 @@ window.addEventListener('error',function(){document.documentElement.classList.re
     b.addEventListener('click', function () {
       document.querySelectorAll('.cal-dur button').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
       b.setAttribute('aria-pressed', 'true');
-      duration = +b.dataset.dur;
-      durLabel.textContent = b.textContent;
-      renderSlots();
+      duration = +b.dataset.dur; durLabel.textContent = b.textContent; renderSlots();
     });
   });
 
   confirmEl.addEventListener('click', function () {
-    var when = selEl.textContent + ' at ' + chosenSlot;
     var box = document.createElement('div');
     box.className = 'cal-done';
-    box.innerHTML = '<b>Preview only</b>This is where the booking would be confirmed — ' + when +
-                    '. Once Cal.com is connected it lands in the calendar, sends the customer a text reminder, ' +
-                    'and blocks the slot automatically. For now, call <a class="gold" href="tel:+19092053009">909-205-3009</a>.';
-    slotsEl.innerHTML = ''; slotsEl.appendChild(box);
-    confirmEl.disabled = true;
+    box.innerHTML = '<b>Preview only</b>This is where the booking would be confirmed — ' +
+                    selEl.textContent + ' at ' + chosenSlot +
+                    '. Once Cal.com is connected it lands in the calendar, texts the customer a reminder and blocks the slot. ' +
+                    'For now, call <a href="tel:+19092053009">909 205 3009</a>.';
+    slotsEl.innerHTML = ''; slotsEl.appendChild(box); confirmEl.disabled = true;
   });
 
-  renderMonth();
-  renderSlots();
+  renderMonth(); renderSlots();
 })();
 </script>
 </body>
