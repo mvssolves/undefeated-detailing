@@ -31,7 +31,7 @@ grep -n "CONFIRM:\|SWAP:" index.html
 3. **Mobile or shop-based** — unknown, so it is claimed nowhere.
 4. **Service list** — Interior / Exterior / Full Detail is placeholder structure. No specialties, coatings, turnaround times or guarantees are claimed.
 5. **Pricing** — deliberately absent. Every card reads "Quote on the vehicle".
-6. **Form endpoint** — currently a `mailto:` fallback. Needs a real inbox or endpoint.
+6. **Cal.com booking** — the booking block is a *working preview*, not a live booking. It runs real calendar maths (past days dead, Sundays closed, slots stop before the 7 PM close) so the owner can see exactly how it behaves, and every slot is illustrative. Going live = create the event type on Cal.com and swap this block for the embed snippet; nothing else on the page changes. Needs: account, event types, real availability, buffers, deposit rules.
 7. **Social profiles** — omitted entirely rather than linked to `#`.
 8. **Years in business, certifications, insurance, guarantees** — not claimed.
 9. **Photography** — all `placehold.co`, marked `SWAP:`. Needs the owner's own before/afters.
@@ -51,6 +51,9 @@ grep -n "CONFIRM:\|SWAP:" index.html
 |---|---|
 | `video/hero.mp4` | Mixkit clip 47588, trimmed/compressed |
 | `img/hero-poster.jpg` | frame from the above |
-| `img/before.jpg`, `after.jpg`, `macro.jpg`, `polish.jpg`, `interior.jpg`, `foam.jpg` | Pexels |
+| `img/ba-before.jpg`, `ba-after.jpg` | Pexels — dirty alloy macro / clean alloy macro, matched framing |
+| `img/slab.jpg`, `interior.jpg`, `foam.jpg`, `polish.jpg`, `work-1..5.jpg` | Pexels, colour-graded to the palette |
+
+No third-party brand marks appear in any shot (one candidate was dropped for a visible "Ceramic Pro" logo — that would imply a certification the business has not claimed).
 
 Every one is demo material and the before/after is labelled as such **on the page**. Replace with the owner's own work before launch.
