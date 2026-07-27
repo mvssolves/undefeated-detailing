@@ -130,7 +130,8 @@ section{padding-block:clamp(72px,11vw,150px);position:relative}
 .btn-solid:hover{background:var(--paper);border-color:var(--paper);transform:translateY(-2px)}
 .btn-ghost{color:var(--paper);border-color:var(--rule)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.btn-sm{padding:12px 18px}
+.btn-sm{padding:12px 18px;white-space:nowrap}
+@media(max-width:480px){.btn-sm{padding:11px 13px;letter-spacing:.1em;font-size:11px}}
 
 /* ---- status chip (computed live, not hardcoded) ---- */
 .chip{
@@ -158,13 +159,20 @@ section{padding-block:clamp(72px,11vw,150px);position:relative}
 .hero-type{position:relative;z-index:2}
 .hero-type h1{font-size:clamp(58px,15.5vw,224px);letter-spacing:-.005em}
 .hero-type h1 .l2{display:block;color:var(--gold);font-size:.42em;letter-spacing:.14em;margin-top:.18em}
-.hero-stage{position:relative;margin-top:-6vw}
+.hero-stage{position:relative;margin-top:18px}
 .hero-car{
-  position:relative;z-index:3;width:100%;aspect-ratio:16/8;object-fit:cover;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 26%,#000 100%);
-          mask-image:linear-gradient(to bottom,transparent 0,#000 26%,#000 100%);
+  position:relative;z-index:3;width:100%;height:auto;aspect-ratio:16/6;object-fit:cover;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 100%);
+          mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 100%);
   filter:saturate(.85) contrast(1.08);
 }
+.hero-spec{
+  position:absolute;left:0;right:0;bottom:0;z-index:4;display:flex;justify-content:space-between;
+  padding:14px 16px;font:600 10px/1 Inter,sans-serif;letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(239,237,232,.55);background:linear-gradient(transparent,rgba(8,8,10,.9));
+}
+.hero-spec span:first-child{color:var(--gold)}
+@media(max-width:700px){.hero-car{aspect-ratio:4/3}}
 .hero-sub{max-width:46ch;font-size:clamp(16px,2vw,19px);color:rgba(239,237,232,.72);margin:26px 0 0}
 .hero-sub em{font-style:normal;color:var(--gold)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
@@ -257,7 +265,9 @@ footer{border-top:1px solid var(--rule);padding-block:clamp(44px,6vw,72px) calc(
 @media(min-width:860px){.callbar{display:none}}
 
 /* ---- motion ---- */
-.reveal{opacity:0;transform:translateY(26px)}
+/* content is visible by default; only hidden once we know motion will run */
+.reveal{opacity:1;transform:none}
+.js-motion .reveal{opacity:0;transform:translateY(26px)}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1!important;transform:none!important}
@@ -267,6 +277,18 @@ footer{border-top:1px solid var(--rule);padding-block:clamp(44px,6vw,72px) calc(
 </style>
 </head>
 <body>
+
+<script>
+/* Arm the scroll reveals only if motion is wanted. If GSAP never arrives, the load
+   handler disarms them so the page can never be left blank. */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-motion');
+  window.addEventListener('load', function(){
+    if (!window.gsap) document.documentElement.classList.remove('js-motion');
+  });
+})();
+</script>
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -296,15 +318,19 @@ footer{border-top:1px solid var(--rule);padding-block:clamp(44px,6vw,72px) calc(
 
     <div class="hero-type">
       <h1>
-        <span data-scramble>Undefeated</span>
+        <span>Undefeated</span>
         <span class="l2">Detailing</span>
       </h1>
     </div>
 
     <div class="hero-stage">
       <!-- SWAP: real peak-action shot. Ideal asset = transparent PNG cutout of the car so the type breaks properly. -->
-      <img class="hero-car" src="https://placehold.co/1920x960/0E0E11/D9B44A/png?text=SWAP%3A+peak-action+detail+shot+%E2%80%94+water+sheeting+off+the+panel"
-           alt="Vehicle mid-detail, water sheeting off a freshly polished panel" width="1920" height="960" fetchpriority="high">
+      <img class="hero-car" src="https://placehold.co/1920x840/12100E/D9B44A/png?text=SWAP%3A+peak-action+detail+shot"
+           alt="Vehicle mid-detail, water sheeting off a freshly polished panel" width="1920" height="840" fetchpriority="high">
+      <div class="hero-spec" aria-hidden="true">
+        <span>Fig. 01 — Subject</span>
+        <span>Condition: handled</span>
+      </div>
     </div>
 
     <p class="hero-sub">Three fights. Three wins. <em>Zero losses.</em> A perfect record on Google, earned one car at a time — treated like it belongs to us.</p>
@@ -579,7 +605,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* --- smooth scroll --- */
   if (window.Lenis) {
-    var lenis = new Lenis({ duration: 1.1 });
+    var lenis = window.__lenis = new Lenis({ duration: 1.1 });
     lenis.on('scroll', function () { if (window.ScrollTrigger) ScrollTrigger.update(); });
     gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
     gsap.ticker.lagSmoothing(0);
@@ -606,7 +632,7 @@ document.addEventListener('DOMContentLoaded', function () {
   (function () {
     var CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/\\<>*#';
     function scramble(el) {
-      var final = el.textContent, frame = 0, total = 26;
+      var final = el.textContent, frame = 0, total = 14;
       var id = setInterval(function () {
         frame++;
         var solved = Math.floor(final.length * (frame / total));
