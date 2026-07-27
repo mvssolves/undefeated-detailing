@@ -164,7 +164,8 @@ section{padding-block:clamp(72px,11vw,140px);position:relative}
 
 /* ---- record ticker ---- */
 .ticker{border-block:1px solid var(--rule);background:var(--ink-2);overflow:hidden;padding-block:14px}
-.ticker-track{display:flex;gap:0;width:max-content;animation:slide 34s linear infinite}
+.ticker-track{display:flex;gap:0;width:max-content;animation:slide 34s linear infinite;animation-play-state:paused}
+.ticker-track.run{animation-play-state:running}
 .ticker-track span{
   font-family:"Big Shoulders Display",sans-serif;font-weight:900;text-transform:uppercase;
   font-size:clamp(20px,3vw,34px);letter-spacing:.04em;color:rgba(239,237,232,.16);
@@ -528,6 +529,14 @@ window.addEventListener('error',function(){document.documentElement.classList.re
     text.textContent = open ? 'Open — closes 7 PM' : 'Closed — call tomorrow';
     setTimeout(tick, 60000);
   })();
+
+  /* ticker only animates while it is actually on screen */
+  var track = document.querySelector('.ticker-track');
+  if (track && !reduced) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { track.classList.toggle('run', e.isIntersecting); });
+    }).observe(track);
+  }
 
   /* reveals */
   var io = new IntersectionObserver(function (es) {
