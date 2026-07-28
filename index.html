@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Undefeated Detailing — Auto Detailing | 909-205-3009</title>
 <meta name="description" content="Auto detailing in Southern California. A perfect five-star record on Google. Treated like the car is ours. Call 909-205-3009.">
-<meta name="theme-color" content="#0B0B0D">
+<meta name="theme-color" content="#12333A">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Undefeated Detailing — Auto Detailing">
 <meta property="og:description" content="A perfect five-star record on Google. Treated like the car is ours. Call 909-205-3009.">
-<meta property="og:image" content="img/hero-poster.jpg">
+<meta property="og:image" content="img/hero-clean.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Undefeated Detailing — Auto Detailing">
 <meta name="twitter:description" content="A perfect five-star record on Google. Treated like the car is ours. Call 909-205-3009.">
@@ -18,6 +18,7 @@
 <!--
   ============================================================================
   UNDEFEATED DETAILING — SPEC BUILD (MVS Solves)
+  See PRODUCT.md and DESIGN.md alongside this file.
   ============================================================================
   VERIFIED (Google Business Profile, 2026-07-27):
     Name, category (car detailing service), phone +1 909-205-3009,
@@ -25,464 +26,412 @@
     owner's own reply "We aim to be undefeated!", no website listed.
 
   UNVERIFIED — nothing on this page claims any of these. Owner must confirm:
-    1. CONFIRM: service area / cities   (pin reads Yucca Valley area, 909 number)
-    2. CONFIRM: full weekly hours       (only "closes 7 pm" is known)
-    3. CONFIRM: mobile or shop-based    (NOT claimed anywhere)
-    4. CONFIRM: service list            (placeholder structure only)
-    5. CONFIRM: pricing                 (no prices shown - quote-based)
-    6. CONFIRM: process steps           (generic detailing order, not his actual process)
-    7. CONFIRM: Cal.com account + event types, availability, deposits
+    1. CONFIRM: target customer     (built for everyday drivers, he has not said)
+    2. CONFIRM: service area / cities
+    3. CONFIRM: full weekly hours   (only "closes 7 pm" is known)
+    4. CONFIRM: mobile or shop-based (NOT claimed anywhere)
+    5. CONFIRM: service list        (placeholder structure only)
+    6. CONFIRM: pricing             (no prices shown - quote-based)
+    7. CONFIRM: process steps       (generic order of a detail, not his stated process)
+    8. CONFIRM: Cal.com account, event types, availability, deposits
                 (booking block is a working PREVIEW, takes no real bookings)
-    8. CONFIRM: social profiles         (omitted, no fake links)
-    9. CONFIRM: years in business, certifications, insurance (NOT claimed)
+    9. CONFIRM: socials, years in business, certifications (NOT claimed)
 
-  IMAGERY: licence-free stock (Pexels / Mixkit), demo only, labelled as such.
-  SWAP every file in /img and /video for the owner's own work before launch.
+  IMAGERY: licence-free stock (Pexels), demo only, labelled as such on the page.
+  SWAP every file in /img for the owner's own photos before launch.
   ============================================================================
 -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/hero-poster.jpg">
+<link rel="preload" as="image" href="img/hero-clean.jpg" fetchpriority="high">
 
 <style>
 :root{
-  --ink:#0B0B0D;
-  --surface:#151519;
-  --paper:#F4F4F2;
-  --accent:#2F6BFF;
-  --accent-soft:rgba(47,107,255,.16);
-  --grey:#83848A;
-  --pad:clamp(20px,5vw,64px);
-  --r:20px;
-  --ease:cubic-bezier(.16,1,.3,1);
-  --pop:cubic-bezier(.22,1,.36,1);
+  /* two brand colours, complementary, both pulled back from full saturation */
+  --petrol:#12333A;
+  --petrol-deep:#0C2228;
+  --copper:#A8613C;
+  --copper-soft:rgba(168,97,60,.12);
+  --shell:#F1F3F3;
+  --shell-2:#E4E8E8;
+  --ink:#131B1D;
+  --ink-soft:#4C585B;
+  --line:rgba(19,27,29,.13);
+  --line-dark:rgba(241,243,243,.16);
+  --pad:clamp(20px,5vw,68px);
+  --r:16px;
+  --ease:cubic-bezier(.22,1,.36,1);
+
+  --z-dock:40;
+  --z-skip:60;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--ink);color:var(--paper);font:400 17px/1.6 Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,video{max-width:100%;display:block}
+body{
+  margin:0;background:var(--shell);color:var(--ink);
+  font:400 17px/1.62 Archivo,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,canvas{max-width:100%;display:block}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:var(--pad);top:14px;z-index:99;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px}
+.skip:focus{left:var(--pad);top:14px;z-index:var(--z-skip);background:var(--petrol);color:var(--shell);padding:11px 17px;border-radius:8px}
 
+h1,h2,h3{
+  font-family:"Bricolage Grotesque",Archivo,sans-serif;font-weight:800;
+  line-height:1;letter-spacing:-.03em;margin:0;text-wrap:balance;
+}
+h2{font-size:clamp(30px,4.4vw,60px)}
+h3{font-size:clamp(21px,2vw,27px);letter-spacing:-.02em}
+p{text-wrap:pretty}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--pad)}
+section{padding-block:clamp(66px,8.5vw,120px)}
+.lede{font-size:clamp(17px,1.6vw,20px);color:var(--ink-soft);max-width:62ch}
+.small{font-size:14px;color:var(--ink-soft)}
 
-h1,h2,h3{font-family:"Bricolage Grotesque",Archivo,sans-serif;font-weight:800;line-height:.98;letter-spacing:-.025em;margin:0}
-.wrap{max-width:1220px;margin-inline:auto;padding-inline:var(--pad)}
-section{padding-block:clamp(72px,9vw,128px);position:relative}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
-.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent);border-radius:2px}
-/* light sections own their background so text can never land on the wrong colour */
-.on-light{background:var(--paper);color:var(--ink)}
-.on-light .eyebrow{color:var(--accent)}
-.lede{font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:rgba(244,244,242,.68);max-width:56ch}
-.on-light .lede{color:#4A4B50}
+/* dark surfaces are punctuation, not the base */
+.dark{background:var(--petrol);color:var(--shell)}
+.dark .lede,.dark .small{color:rgba(241,243,243,.72)}
 
-/* ---------- buttons ---------- */
+/* ---------- controls ---------- */
 .btn{
   position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  padding:16px 28px;border-radius:999px;text-decoration:none;overflow:hidden;
-  font-size:15px;font-weight:600;border:2px solid transparent;
-  transition:transform .3s var(--pop),background .25s ease,color .25s ease,border-color .25s ease,box-shadow .3s ease;
+  padding:16px 26px;border-radius:999px;text-decoration:none;
+  font-size:15px;font-weight:600;border:1.5px solid var(--petrol);background:var(--petrol);color:var(--shell);
+  transition:transform .28s var(--ease),background .22s ease,color .22s ease,box-shadow .28s ease;
 }
-.btn:active{transform:scale(.97)}
-.btn-solid{background:var(--accent);color:#fff}
-.btn-solid:hover{box-shadow:0 12px 28px rgba(0,0,0,.32);transform:translateY(-2px)}
-.btn-line{border-color:currentColor}
-.btn-line:hover{background:var(--paper);color:var(--ink);border-color:var(--paper);transform:translateY(-2px)}
-.on-light .btn-line:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-/* light sweep across the primary button */
-.btn-solid::after{
-  content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.42),transparent);
-  transform:skewX(-18deg);transition:left .65s cubic-bezier(.4,0,.2,1);
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(12,34,40,.22)}
+.btn:active{transform:translateY(0)}
+.btn-ghost{background:transparent;color:var(--petrol);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--petrol);box-shadow:none}
+.arrow{transition:transform .28s var(--ease)}
+.btn:hover .arrow,.tlink:hover .arrow{transform:translateX(4px)}
+.tlink{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;font-size:15px;
+  color:var(--copper);border-bottom:1.5px solid currentColor;padding-bottom:4px;
 }
-.btn-solid:hover::after{left:130%}
-.arrow{transition:transform .3s var(--ease)}
-.btn:hover .arrow{transform:translateX(4px)}
+.tlink:hover{opacity:.72}
 
-/* ---------- floating dock ---------- */
-#dock{
-  position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);
-  z-index:80;display:flex;align-items:center;gap:4px;padding:6px;
-  background:rgba(14,14,17,.94);border:1px solid rgba(244,244,242,.12);border-radius:999px;
-  box-shadow:0 18px 44px rgba(0,0,0,.45);max-width:calc(100vw - 20px);
+/* ---------- HERO ---------- */
+.hero{position:relative;padding-block:clamp(70px,9vh,104px) clamp(40px,6vw,72px);background:var(--shell)}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:clamp(26px,4vw,44px)}
+.mark{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:17px;letter-spacing:-.02em;text-decoration:none}
+.mark span{color:var(--copper)}
+.hero-nav{display:none;gap:26px;font-size:14px}
+.hero-nav a{text-decoration:none;color:var(--ink-soft)}
+.hero-nav a:hover{color:var(--copper)}
+@media(min-width:900px){.hero-nav{display:flex}}
+.hero h1{font-size:clamp(38px,6.2vw,88px);max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--copper)}
+.hero-lead{display:grid;gap:22px;align-items:end;margin-top:clamp(22px,3vw,34px)}
+@media(min-width:840px){.hero-lead{grid-template-columns:1.35fr 1fr}}
+.hero-lead p{margin:0;max-width:46ch;color:var(--ink-soft);font-size:clamp(16px,1.6vw,19px)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* the wipe stage — the signature interaction */
+.stage{position:relative;margin-top:clamp(26px,4vw,44px);border-radius:var(--r);overflow:hidden;background:var(--petrol-deep);aspect-ratio:16/10}
+@media(min-width:760px){.stage{aspect-ratio:2.35/1}}
+.stage img{width:100%;height:100%;object-fit:cover}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.stage canvas:active{cursor:grabbing}
+.stage-hint{
+  position:absolute;right:16px;top:16px;z-index:3;pointer-events:none;
+  display:inline-flex;align-items:center;gap:9px;padding:10px 17px;border-radius:999px;
+  background:rgba(12,34,40,.74);color:var(--shell);font-size:13px;font-weight:600;
+  transition:opacity .5s ease;
 }
-#dock a{
-  position:relative;z-index:2;padding:10px 15px;border-radius:999px;text-decoration:none;
-  font-size:13px;font-weight:600;color:rgba(244,244,242,.66);white-space:nowrap;
-  transition:color .2s ease,transform .3s var(--pop);
+.stage-hint.gone{opacity:0}
+.stage-cap{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+
+/* ---------- proof line ---------- */
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px;padding-block:clamp(22px,3vw,30px);border-block:1px solid var(--line)}
+.proof b{font-weight:600}
+.stars{color:var(--copper);letter-spacing:.12em}
+
+/* ---------- services as alternating rows, not a card grid ---------- */
+.svc{display:grid;gap:clamp(22px,3vw,44px);align-items:center;padding-block:clamp(30px,4vw,52px);border-bottom:1px solid var(--line)}
+@media(min-width:860px){
+  .svc{grid-template-columns:1fr 1fr}
+  .svc:nth-child(even) .svc-media{order:2}
 }
-#dock a:hover{color:var(--paper)}
-#dock a.on{color:#fff}
-#dock .pill{position:absolute;left:0;top:6px;bottom:6px;border-radius:999px;background:rgba(244,244,242,.12);z-index:1;transform:translate3d(0,0,0);transition:transform .42s var(--ease),opacity .25s ease;opacity:0}
-#dock .cta{background:var(--accent);color:#fff}
-#dock .cta:hover{color:#fff;transform:translateY(-2px)}
-@media(max-width:560px){#dock .hide-sm{display:none}}
-
-/* ---------- headline word reveal ---------- */
-.tr{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
-.tr i{display:inline-block;font-style:inherit;transform:translateY(115%);transition:transform .9s var(--ease);transition-delay:var(--wd,0ms)}
-.in .tr i,.no-js .tr i{transform:none}
-
-/* ---------- generic reveal ---------- */
-.rv{opacity:0;transform:translateY(38px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
-.rv.pop{transform:translateY(42px) scale(.94);transition:opacity .7s var(--ease),transform .75s var(--pop)}
-.rv.in{opacity:1;transform:none}
-.no-js .rv{opacity:1;transform:none}
-
-/* ---------- hero ---------- */
-.hero{min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding-block:clamp(96px,13vh,150px) clamp(96px,12vh,132px)}
-.hero-media{position:absolute;inset:0;z-index:0}
-.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,13,.78),rgba(11,11,13,.22) 38%,rgba(11,11,13,.9) 86%,var(--ink))}
-/* slow gloss sweeps, like light moving over wet paint */
-.gloss{position:absolute;z-index:1;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;will-change:transform}
-.g1{width:52vw;height:52vw;left:-8vw;top:6vh;background:radial-gradient(circle,rgba(47,107,255,.5),transparent 68%);animation:gl1 20s ease-in-out infinite}
-.g2{width:42vw;height:42vw;right:-6vw;bottom:2vh;background:radial-gradient(circle,rgba(255,255,255,.3),transparent 66%);animation:gl2 24s ease-in-out infinite}
-@keyframes gl1{0%,100%{transform:translate3d(-6%,-8%,0)}50%{transform:translate3d(16%,10%,0)}}
-@keyframes gl2{0%,100%{transform:translate3d(10%,6%,0)}50%{transform:translate3d(-14%,-8%,0)}}
-.hero .wrap{position:relative;z-index:5;width:100%}
-.hero h1{font-size:clamp(44px,8.4vw,124px);max-width:13ch}
-.hero h1 .hl{color:var(--accent)}
-.hero-sub{margin:26px 0 0;max-width:44ch;font-size:clamp(16px,1.7vw,19px);color:rgba(244,244,242,.76)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;background:rgba(244,244,242,.08);border:1px solid rgba(244,244,242,.14);font-size:13px;font-weight:500}
-.badge .dot{width:7px;height:7px;border-radius:50%;background:#37D67A}
-.badge[data-state="closed"] .dot{background:#FFA53C}
-.stars{color:#FFC24B;letter-spacing:.1em}
-
-/* ---------- stat counters ---------- */
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:clamp(40px,6vw,68px)}
-@media(min-width:820px){.stats{grid-template-columns:repeat(4,1fr)}}
-.stat{background:var(--surface);border:1px solid rgba(244,244,242,.1);border-radius:var(--r);padding:clamp(20px,2.4vw,30px);transition:border-color .3s ease,transform .4s var(--ease)}
-.stat:hover{border-color:var(--accent);transform:translateY(-4px)}
-.on-light .stat{background:#fff;border-color:rgba(11,11,13,.09);box-shadow:0 2px 14px rgba(11,11,13,.05)}
-.stat b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(34px,4vw,52px);line-height:1;letter-spacing:-.03em;color:var(--accent)}
-.stat span{display:block;margin-top:10px;font-size:13px;color:var(--grey)}
-
-/* ---------- service cards ---------- */
-.cards{display:grid;gap:16px;margin-top:clamp(34px,4vw,54px)}
-@media(min-width:760px){.cards{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1060px){.cards{grid-template-columns:repeat(3,1fr)}}
-.card{
-  position:relative;background:#fff;border:1px solid rgba(11,11,13,.09);border-radius:var(--r);
-  overflow:hidden;display:flex;flex-direction:column;
-  transition:transform .45s var(--ease),box-shadow .45s ease,border-color .3s ease;
-}
-.card:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(11,11,13,.16);border-color:var(--accent)}
-.card-media{position:relative;aspect-ratio:16/10;overflow:hidden}
-.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
-.card:hover .card-media img{transform:scale(1.07)}
-.card-icon{
-  position:absolute;left:18px;bottom:-24px;width:52px;height:52px;border-radius:15px;display:grid;place-items:center;
-  background:var(--accent);color:#fff;box-shadow:0 10px 22px rgba(11,11,13,.28);
-  transition:transform .4s var(--pop);
-}
-.card:hover .card-icon{transform:scale(1.12) rotate(-6deg)}
-.card-icon svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.card-body{padding:40px clamp(20px,2.2vw,28px) clamp(22px,2.2vw,28px);display:flex;flex-direction:column;flex:1;color:var(--ink)}
-.card h3{font-size:clamp(22px,2vw,27px);margin-bottom:10px}
-.card p{margin:0;color:#5A5B60;font-size:15px}
-.card ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:9px;font-size:14px;color:#4A4B50}
-.card li{display:flex;gap:9px;align-items:flex-start}
-.card li svg{flex:0 0 15px;margin-top:4px;stroke:var(--accent);fill:none;stroke-width:2.4}
-.card .book{
-  margin-top:22px;padding-top:18px;border-top:1px solid rgba(11,11,13,.08);
-  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
-  font-size:14px;font-weight:600;color:var(--accent);
-}
-.card .book .arrow{display:inline-block}
-.card:hover .book .arrow{transform:translateX(5px)}
-.card .quote-tag{font-size:12px;color:var(--grey);margin-left:auto;font-weight:500}
-
-/* ---------- process ---------- */
-.steps{display:grid;gap:14px;margin-top:clamp(34px,4vw,54px)}
-@media(min-width:760px){.steps{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1100px){.steps{grid-template-columns:repeat(4,1fr)}}
-.step{position:relative;background:var(--surface);border:1px solid rgba(244,244,242,.1);border-radius:var(--r);padding:clamp(22px,2.4vw,30px);overflow:hidden;transition:border-color .3s ease,transform .45s var(--ease)}
-.step:hover{border-color:var(--accent);transform:translateY(-5px)}
-.step b{font-family:"Bricolage Grotesque",sans-serif;font-size:56px;font-weight:800;line-height:1;color:rgba(244,244,242,.1);transition:color .3s ease}
-.step:hover b{color:var(--accent-soft)}
-.step h3{font-size:21px;margin:14px 0 10px}
-.step p{margin:0;font-size:15px;color:rgba(244,244,242,.62)}
+.svc-media{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--shell-2)}
+.svc-media img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.svc:hover .svc-media img{transform:scale(1.04)}
+.svc-body h3{margin-bottom:12px}
+.svc-body p{margin:0;color:var(--ink-soft);max-width:52ch}
+.svc-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px;font-size:15px}
+.svc-list li{display:flex;gap:11px;align-items:flex-start;color:var(--ink-soft)}
+.svc-list svg{flex:0 0 16px;margin-top:4px;stroke:var(--copper);fill:none;stroke-width:2.2}
+.svc-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:24px}
 
 /* ---------- before / after ---------- */
-.ba{position:relative;overflow:hidden;border-radius:var(--r);aspect-ratio:16/11;user-select:none;background:var(--surface);box-shadow:0 30px 70px rgba(0,0,0,.35)}
-@media(min-width:760px){.ba{aspect-ratio:16/7.5}}
+.ba{position:relative;overflow:hidden;border-radius:var(--r);aspect-ratio:16/11;user-select:none;background:var(--petrol-deep)}
+@media(min-width:760px){.ba{aspect-ratio:2/1}}
 .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ba .after{clip-path:inset(0 0 0 50%)}
-.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;z-index:4;pointer-events:none;box-shadow:0 0 22px rgba(0,0,0,.5)}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--shell);z-index:3;pointer-events:none}
 .ba-handle::after{
-  content:"";position:absolute;top:50%;left:50%;width:54px;height:54px;border-radius:50%;
-  transform:translate(-50%,-50%);background:#fff;
-  box-shadow:0 6px 22px rgba(0,0,0,.35);
+  content:"\2039\2003\203A";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:46px;height:46px;border-radius:50%;background:var(--shell);color:var(--petrol);
+  display:grid;place-items:center;font:600 14px/1 Archivo,sans-serif;
 }
-.ba-handle::before{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;
-  content:"\2039\2003\203A";width:auto;height:auto;color:var(--ink);
-  font:600 15px/1 Archivo,sans-serif;display:grid;place-items:center;
+.ba-tag{position:absolute;top:14px;z-index:4;padding:7px 13px;border-radius:999px;background:rgba(12,34,40,.66);color:var(--shell);font-size:12px;font-weight:600;pointer-events:none}
+.ba-tag.l{left:14px}.ba-tag.r{right:14px}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
+
+/* ---------- process: the one numbered sequence on the page ---------- */
+.steps{counter-reset:step;margin-top:clamp(28px,4vw,44px);display:grid;gap:0}
+@media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark)}}
+.step{position:relative;padding:clamp(22px,2.6vw,30px) 0;border-top:1px solid var(--line-dark)}
+@media(min-width:900px){.step{background:var(--petrol);padding:clamp(24px,2.4vw,32px);border-top:0}}
+.step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:13px;letter-spacing:.06em;color:var(--copper);
 }
-.ba-tag{position:absolute;top:16px;z-index:5;padding:7px 14px;border-radius:999px;background:rgba(11,11,13,.6);color:#fff;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;pointer-events:none}
-.ba-tag.l{left:16px}.ba-tag.r{right:16px}
-.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:6;margin:0}
+.step h3{margin:14px 0 9px;font-size:20px}
+.step p{margin:0;font-size:15px;color:rgba(241,243,243,.7)}
 
 /* ---------- carousel ---------- */
-.carousel{position:relative;margin-top:clamp(34px,4vw,54px)}
+.carousel{margin-top:clamp(30px,4vw,52px)}
 .viewport{overflow:hidden;border-radius:var(--r)}
-.track{display:flex;gap:14px;transition:transform .7s var(--ease);will-change:transform}
-.slide{flex:0 0 82%;border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--surface)}
-@media(min-width:760px){.slide{flex-basis:44%}}
-@media(min-width:1100px){.slide{flex-basis:31%}}
-.slide img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
-.slide:hover img{transform:scale(1.06)}
-.slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 16px;color:#fff;font-size:14px;font-weight:600;background:linear-gradient(transparent,rgba(11,11,13,.85))}
-.car-nav{display:flex;align-items:center;gap:10px;margin-top:20px}
-.car-nav button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(244,244,242,.2);background:transparent;color:inherit;cursor:pointer;display:grid;place-items:center;transition:background .25s ease,color .25s ease,transform .3s var(--pop)}
-.car-nav button:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
-.car-nav button svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2}
+.track{display:flex;gap:12px;transition:transform .75s var(--ease);will-change:transform}
+.slide{flex:0 0 78%;border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--shell-2);margin:0}
+@media(min-width:760px){.slide{flex-basis:42%}}
+@media(min-width:1100px){.slide{flex-basis:30.5%}}
+.slide img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.slide:hover img{transform:scale(1.05)}
+.slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;color:var(--shell);font-size:13px;font-weight:600;background:linear-gradient(transparent,rgba(12,34,40,.86))}
+.car-nav{display:flex;align-items:center;gap:9px;margin-top:18px}
+.car-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:inherit;cursor:pointer;display:grid;place-items:center;transition:background .22s ease,color .22s ease,border-color .22s ease,transform .28s var(--ease)}
+.car-nav button:hover{background:var(--petrol);border-color:var(--petrol);color:var(--shell);transform:translateY(-2px)}
+.car-nav svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
 .dots{display:flex;gap:7px;margin-left:auto}
-.dots button{width:9px;height:9px;padding:0;border-radius:999px;border:0;background:rgba(11,11,13,.22);cursor:pointer;transition:transform .3s var(--ease),background .3s ease}
-.dots button[aria-current="true"]{transform:scale(1.5);background:var(--accent)}
+.dots button{width:9px;height:9px;padding:0;border-radius:999px;border:0;background:var(--line);cursor:pointer;transition:transform .28s var(--ease),background .22s ease}
+.dots button[aria-current="true"]{transform:scale(1.5);background:var(--copper)}
 
-/* ---------- reviews ---------- */
-.revs{display:grid;gap:16px;margin-top:clamp(34px,4vw,54px)}
-@media(min-width:900px){.revs{grid-template-columns:repeat(3,1fr)}}
-.rev{background:var(--surface);border:1px solid rgba(244,244,242,.1);border-radius:var(--r);padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;transition:transform .45s var(--ease),border-color .3s ease}
-.rev:hover{transform:translateY(-5px);border-color:var(--accent)}
-.rev .stars{font-size:15px;margin-bottom:16px}
-.rev blockquote{margin:0;font-size:16px;line-height:1.55;flex:1;color:rgba(244,244,242,.9)}
-.rev cite{display:flex;align-items:center;gap:11px;margin-top:22px;font-style:normal;font-size:14px;color:rgba(244,244,242,.6)}
-.rev .av{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:600;font-size:14px}
-
-/* ---------- pull quote ---------- */
-.slab{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;min-height:clamp(300px,44vw,520px);padding:clamp(60px,8vw,110px) var(--pad)}
-.slab img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.slab::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,13,.55),rgba(11,11,13,.8))}
-.slab .inner{position:relative;z-index:3;max-width:18ch}
-.slab p{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(32px,6vw,84px);line-height:.98;letter-spacing:-.03em;margin:0}
-.slab cite{display:block;margin-top:22px;font-style:normal;font-size:14px;color:rgba(244,244,242,.6)}
+/* ---------- reviews: one featured, two supporting ---------- */
+.revs{display:grid;gap:14px;margin-top:clamp(26px,3.5vw,44px)}
+@media(min-width:900px){.revs{grid-template-columns:1.5fr 1fr;align-items:start}}
+.rev{border:1px solid var(--line-dark);border-radius:var(--r);padding:clamp(22px,2.6vw,32px)}
+.rev-lead blockquote{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:clamp(20px,2.3vw,30px);line-height:1.24;letter-spacing:-.02em;margin:16px 0 0}
+.rev-side{display:grid;gap:14px}
+.rev-side blockquote{margin:14px 0 0;font-size:16px;line-height:1.5}
+.rev cite{display:block;margin-top:18px;font-style:normal;font-size:13px;color:rgba(241,243,243,.62)}
+.owner-line{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:clamp(22px,2.8vw,38px);letter-spacing:-.025em;line-height:1.16;max-width:18ch;margin:clamp(38px,5vw,64px) 0 0}
 
 /* ---------- booking ---------- */
-.book-grid{display:grid;gap:16px;margin-top:clamp(30px,4vw,48px)}
-@media(min-width:1000px){.book-grid{grid-template-columns:.85fr 1.15fr;align-items:start}}
-.call-card{background:var(--accent);color:#fff;border-radius:var(--r);padding:clamp(26px,3vw,38px);text-decoration:none;display:block;transition:transform .45s var(--ease),box-shadow .4s ease}
-.call-card:hover{transform:translateY(-5px);box-shadow:0 22px 46px rgba(11,11,13,.3)}
-.call-card small{font-size:13px;opacity:.85}
-.call-card b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(30px,4.4vw,50px);letter-spacing:-.03em;line-height:1.05;margin-top:8px}
-.facts{list-style:none;margin:16px 0 0;padding:0;background:var(--surface);border:1px solid rgba(244,244,242,.1);border-radius:var(--r);overflow:hidden}
-.on-light .facts{background:#fff;border-color:rgba(11,11,13,.09)}
-.facts li{display:flex;justify-content:space-between;gap:18px;padding:15px clamp(18px,2vw,24px);font-size:14px}
-.facts li + li{border-top:1px solid rgba(11,11,13,.08)}
-.facts span:first-child{color:var(--grey)}
+.book-grid{display:grid;gap:16px;margin-top:clamp(26px,3.5vw,44px)}
+@media(min-width:1020px){.book-grid{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.call-card{display:block;text-decoration:none;border-radius:var(--r);padding:clamp(24px,3vw,34px);background:var(--petrol);color:var(--shell);transition:transform .3s var(--ease),box-shadow .3s ease}
+.call-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(12,34,40,.24)}
+.call-card small{font-size:13px;opacity:.75}
+.call-card b{display:block;margin-top:8px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,42px);letter-spacing:-.03em;line-height:1.06}
+.facts{list-style:none;margin:14px 0 0;padding:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:14px clamp(16px,2vw,22px);font-size:14px}
+.facts li+li{border-top:1px solid var(--line)}
+.facts span:first-child{color:var(--ink-soft)}
 
-.cal{border:1px solid rgba(11,11,13,.1);background:#fff;border-radius:var(--r);overflow:hidden;display:grid;color:var(--ink)}
-@media(min-width:760px){.cal{grid-template-columns:1.25fr minmax(150px,.62fr)}}
-.cal-col{padding:clamp(18px,2.1vw,26px)}
-.cal-col + .cal-col{border-top:1px solid rgba(11,11,13,.1)}
-@media(min-width:760px){.cal-col + .cal-col{border-top:0;border-left:1px solid rgba(11,11,13,.1)}}
-.cal-top{display:flex;align-items:center;gap:11px;padding:clamp(18px,2.1vw,26px);border-bottom:1px solid rgba(11,11,13,.1);grid-column:1/-1}
-.cal-av{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:600;font-size:13px}
+.cal{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden;display:grid}
+@media(min-width:720px){.cal{grid-template-columns:1.3fr minmax(146px,.6fr)}}
+.cal-top{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:clamp(16px,2vw,22px);border-bottom:1px solid var(--line)}
+.cal-av{width:36px;height:36px;border-radius:50%;background:var(--petrol);color:var(--shell);display:grid;place-items:center;font-size:12px;font-weight:600}
 .cal-top b{display:block;font-size:15px}
-.cal-top small{color:var(--grey);font-size:13px}
-.cal-top .dur{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
-.cal-top .dur button{border:1px solid rgba(11,11,13,.14);background:transparent;border-radius:999px;padding:8px 13px;font:inherit;font-size:13px;cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease}
-.cal-top .dur button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.cal-top small{color:var(--ink-soft);font-size:13px}
+.dur{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.dur button{border:1px solid var(--line);background:transparent;border-radius:999px;padding:8px 13px;font:inherit;font-size:13px;cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease}
+.dur button[aria-pressed="true"]{background:var(--petrol);border-color:var(--petrol);color:var(--shell)}
+.cal-col{padding:clamp(16px,2vw,22px)}
+.cal-col+.cal-col{border-top:1px solid var(--line)}
+@media(min-width:720px){.cal-col+.cal-col{border-top:0;border-left:1px solid var(--line)}}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
 .cal-head strong{font-size:15px}
 .cal-nav{display:flex;gap:6px}
-.cal-nav button{width:30px;height:30px;border-radius:50%;border:1px solid rgba(11,11,13,.14);background:transparent;cursor:pointer;font:inherit;line-height:1;transition:background .2s ease,border-color .2s ease,color .2s ease}
-.cal-nav button:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.cal-nav button{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer;font:inherit;line-height:1;transition:background .2s ease,border-color .2s ease,color .2s ease}
+.cal-nav button:hover{background:var(--petrol);border-color:var(--petrol);color:var(--shell)}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
-.cal-dow{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);text-align:center;padding-bottom:6px}
-.cal-day{aspect-ratio:1;display:grid;place-items:center;border:0;border-radius:10px;background:#F1F1EF;color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer;position:relative;transition:background .2s ease,transform .25s var(--pop),color .2s ease}
-.cal-day:hover:not(:disabled){background:var(--accent-soft);transform:scale(1.07)}
-.cal-day:disabled{background:transparent;color:rgba(11,11,13,.22);cursor:default}
-.cal-day[aria-pressed="true"]{background:var(--accent);color:#fff}
-.cal-day.free::after{content:"";position:absolute;bottom:5px;width:4px;height:4px;border-radius:50%;background:var(--accent)}
-.cal-day[aria-pressed="true"].free::after{background:#fff}
-.cal-slots{display:grid;gap:6px;max-height:264px;overflow:auto}
-.cal-slot{padding:11px;border-radius:10px;border:1px solid rgba(11,11,13,.12);background:transparent;cursor:pointer;font:inherit;font-size:14px;font-weight:500;transition:border-color .2s ease,background .2s ease,color .2s ease}
-.cal-slot:hover{border-color:var(--accent);color:var(--accent)}
-.cal-slot[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.cal-confirm{width:100%;margin-top:10px;padding:14px;border-radius:999px;border:0;background:var(--accent);color:#fff;font:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s ease,transform .3s var(--pop)}
+.cal-dow{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);text-align:center;padding-bottom:5px}
+.cal-day{aspect-ratio:1;display:grid;place-items:center;border:0;border-radius:9px;background:var(--shell-2);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer;position:relative;transition:background .2s ease,color .2s ease,transform .25s var(--ease)}
+.cal-day:hover:not(:disabled){background:var(--copper-soft);transform:scale(1.06)}
+.cal-day:disabled{background:transparent;color:rgba(19,27,29,.26);cursor:default}
+.cal-day[aria-pressed="true"]{background:var(--petrol);color:var(--shell)}
+.cal-day.free::after{content:"";position:absolute;bottom:5px;width:4px;height:4px;border-radius:50%;background:var(--copper)}
+.cal-day[aria-pressed="true"].free::after{background:var(--shell)}
+.cal-slots{display:grid;gap:6px;max-height:250px;overflow:auto}
+.cal-slot{padding:11px;border-radius:9px;border:1px solid var(--line);background:transparent;cursor:pointer;font:inherit;font-size:14px;font-weight:500;transition:border-color .2s ease,color .2s ease,background .2s ease}
+.cal-slot:hover{border-color:var(--copper);color:var(--copper)}
+.cal-slot[aria-pressed="true"]{background:var(--petrol);border-color:var(--petrol);color:var(--shell)}
+.cal-confirm{width:100%;margin-top:10px;padding:13px;border-radius:999px;border:0;background:var(--petrol);color:var(--shell);font:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s ease,transform .28s var(--ease)}
 .cal-confirm:disabled{opacity:.32;cursor:not-allowed}
 .cal-confirm:not(:disabled):hover{transform:translateY(-2px)}
-.cal-done{border-radius:12px;background:var(--accent-soft);padding:16px;font-size:14px;color:#33353B}
-.cal-done b{display:block;color:var(--accent);margin-bottom:6px}
-.cal-foot{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:13px;color:var(--grey)}
+.cal-done{border-radius:11px;background:var(--copper-soft);padding:15px;font-size:14px;color:var(--ink)}
+.cal-done b{display:block;color:var(--copper);margin-bottom:6px}
 
-/* ---------- footer ---------- */
-footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 calc(96px + env(safe-area-inset-bottom))}
-.foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:13px;color:rgba(244,244,242,.55)}
-.foot a{color:var(--accent);text-decoration:none}
+/* ---------- dock ---------- */
+#dock{
+  position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);
+  z-index:var(--z-dock);display:flex;align-items:center;gap:3px;padding:5px;
+  background:rgba(12,34,40,.95);border-radius:999px;box-shadow:0 14px 34px rgba(12,34,40,.3);
+  max-width:calc(100vw - 18px);
+}
+#dock a{position:relative;z-index:2;padding:10px 14px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:600;color:rgba(241,243,243,.68);white-space:nowrap;transition:color .2s ease}
+#dock a:hover,#dock a.on{color:var(--shell)}
+#dock .pill{position:absolute;left:0;top:5px;bottom:5px;border-radius:999px;background:rgba(241,243,243,.13);z-index:1;opacity:0;transform:translate3d(0,0,0);transition:transform .4s var(--ease),opacity .25s ease}
+#dock .cta{background:var(--copper);color:#fff}
+#dock .cta:hover{color:#fff}
+@media(max-width:540px){#dock .hide-sm{display:none}}
 
+footer{padding:clamp(28px,4vw,42px) 0 calc(88px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:13px;color:var(--ink-soft)}
+.foot a{color:var(--copper);text-decoration:none}
+
+/* ---------- motion enhances content that is already visible ---------- */
+.rv{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .rv,.tr i{opacity:1!important;transform:none!important;transition:none!important}
-  .gloss,.track{animation:none!important}
-  *{transition-duration:.01ms!important}
+  .js .rv{opacity:1;transform:none;transition:none}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
 </style>
 </head>
-<body class="no-js">
-<script>document.body.classList.remove('no-js');</script>
+<body>
+<script>document.documentElement.classList.add('js');</script>
 
 <a class="skip" href="#main">Skip to content</a>
 
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="hero" id="top" data-bg="#0B0B0D">
-  <div class="hero-media">
-    <!-- SWAP: the owner's own footage -->
-    <video id="hero-video" poster="img/hero-poster.jpg" muted loop playsinline preload="none" aria-hidden="true">
-      <source src="video/hero.mp4" type="video/mp4">
-    </video>
-  </div>
-  <span class="gloss g1" aria-hidden="true"></span>
-  <span class="gloss g2" aria-hidden="true"></span>
-
+<section class="hero" id="top">
   <div class="wrap">
-    <div class="badges rv">
-      <span class="badge" id="status"><span class="dot"></span><span id="status-text">Open — closes 7pm</span></span>
-      <span class="badge"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
-      <span class="badge">Southern California<!-- CONFIRM: service area --></span>
+    <div class="hero-top">
+      <a class="mark" href="#top">Undefeated<span>.</span></a>
+      <nav class="hero-nav" aria-label="Primary">
+        <a href="#services">Services</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#book">Book</a>
+      </nav>
+      <a class="tlink" href="tel:+19092053009">909 205 3009</a>
     </div>
 
-    <h1 data-split>Detailing done like the car is <span class="hl">ours.</span></h1>
+    <h1 class="rv">Detailing done like the car is <em>ours.</em></h1>
 
-    <p class="hero-sub rv" style="--d:120ms">Wash, decontaminate, correct, protect — by hand, at the pace the paint needs. Every car that has been through us came back rated five out of five.</p>
+    <div class="hero-lead">
+      <p class="rv" style="--d:80ms">Southern California. Every car that has been through us came back rated five out of five — so the standard is not going anywhere.</p>
+      <div class="hero-actions rv" style="--d:150ms">
+        <a class="btn" href="tel:+19092053009">Call the shop</a>
+        <a class="btn btn-ghost" href="#book">See open slots <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
 
-    <div class="hero-cta rv" style="--d:220ms">
-      <a class="btn btn-solid" href="tel:+19092053009">Call 909 205 3009</a>
-      <a class="btn btn-line" href="#book">Book a slot <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    <!-- the signature interaction: the hero arrives dirty, you wipe it clean -->
+    <div class="stage rv" id="stage" style="--d:220ms">
+      <!-- SWAP: the owner's own car -->
+      <img src="img/hero-clean.jpg" alt="Front of a black car detailed to a mirror finish" width="2200" height="1400" fetchpriority="high" decoding="async">
+      <canvas id="grime" aria-hidden="true"></canvas>
+      <span class="stage-hint" id="hint">Drag across to clean it</span>
+    </div>
+    <div class="stage-cap">
+      <span class="small">Demo photo — his own work goes here before launch</span>
+      <span class="small" id="clock">Open until 7pm<!-- CONFIRM: weekly hours --></span>
     </div>
   </div>
 </section>
 
-<!-- ================= STATS ================= -->
-<section data-bg="#0B0B0D" style="padding-top:0">
+<!-- ================= PROOF ================= -->
+<section style="padding-block:0">
   <div class="wrap">
-    <div class="stats">
-      <div class="stat rv pop"><b data-count="5" data-dec="1">0.0</b><span>Google rating</span></div>
-      <div class="stat rv pop" style="--d:90ms"><b data-count="100" data-suffix="%">0%</b><span>Five-star reviews</span></div>
-      <div class="stat rv pop" style="--d:180ms"><b data-count="3">0</b><span>Reviews, all perfect</span></div>
-      <div class="stat rv pop" style="--d:270ms"><b>7pm</b><span>Open until<!-- CONFIRM: weekly hours --></span></div>
+    <div class="proof">
+      <span><span class="stars" aria-hidden="true">★★★★★</span> <b>5.0 on Google</b></span>
+      <span class="small">Three reviews. Three five-stars.</span>
+      <span class="small">909 · Southern California<!-- CONFIRM: service area --></span>
+      <span class="small">Quoted per vehicle, not off a menu</span>
     </div>
   </div>
 </section>
 
 <!-- ================= SERVICES =================
-     CONFIRM: services offered — placeholder structure, no specialties,
-     packages, turnaround times or guarantees claimed. CONFIRM: pricing. -->
-<section id="services" class="on-light" data-bg="#F4F4F2">
+     CONFIRM: services offered — placeholder structure. No specialties, packages,
+     turnaround times or guarantees claimed. CONFIRM: pricing. -->
+<section id="services">
   <div class="wrap">
-    <p class="eyebrow rv">What we do</p>
-    <h2 data-split style="font-size:clamp(32px,5vw,68px);max-width:14ch">Pick what the car needs.</h2>
-    <p class="lede rv" style="--d:100ms;margin-top:20px">Every vehicle is quoted on what is actually in front of us — condition, size, how long it has been. A fixed menu price would only ignore the car.</p>
+    <h2 class="rv">Three ways in. All of them start with looking at the car.</h2>
+    <p class="lede rv" style="--d:80ms;margin-top:18px">Condition, size, how long it has been left. A fixed menu price would only ignore all three, so nothing here has one.</p>
 
-    <div class="cards">
-      <article class="card rv pop">
-        <div class="card-media">
-          <img src="img/interior.jpg" alt="Detailer cleaning a vehicle interior" width="1400" height="1050" loading="lazy" decoding="async">
-          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17V9a3 3 0 0 1 3-3h3l2-3h4v11"/><path d="M4 17h16"/><circle cx="8" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg></span>
-        </div>
-        <div class="card-body">
+    <div style="margin-top:clamp(26px,3.5vw,44px)">
+      <article class="svc rv">
+        <div class="svc-media"><img src="img/interior.jpg" alt="Extracting dirt from a fabric car seat" width="1400" height="1050" loading="lazy" decoding="async"></div>
+        <div class="svc-body">
           <h3>Interior</h3>
-          <p>Everything you touch, sit on and breathe — brought back.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Vacuum and extraction throughout</li>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Every surface, vent and crevice</li>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Glass finished inside and out</li>
+          <p>Everything you touch, sit on and breathe. The part of the car you actually live in.</p>
+          <ul class="svc-list">
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Vacuum and hot extraction through seats and carpets</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Every vent, seam and crevice done by hand</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Glass finished inside and out, no streaks left behind</li>
           </ul>
-          <a class="book" href="#book">Book this <span class="arrow" aria-hidden="true">&rarr;</span><span class="quote-tag">Quoted per vehicle</span></a>
+          <div class="svc-foot">
+            <a class="tlink" href="#book">Book interior <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <span class="small">Quoted on the vehicle</span>
+          </div>
         </div>
       </article>
 
-      <article class="card rv pop" style="--d:100ms">
-        <div class="card-media">
-          <img src="img/foam.jpg" alt="Car covered in wash foam" width="1400" height="1050" loading="lazy" decoding="async">
-          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s5 5.5 5 9a5 5 0 0 1-10 0c0-3.5 5-9 5-9z"/><path d="M9.5 13a2.5 2.5 0 0 0 2.5 2.5"/></svg></span>
-        </div>
-        <div class="card-body">
+      <article class="svc rv">
+        <div class="svc-media"><img src="img/foam.jpg" alt="A car covered in wash foam" width="1400" height="1050" loading="lazy" decoding="async"></div>
+        <div class="svc-body">
           <h3>Exterior</h3>
-          <p>Wash, decontaminate, protect. The finish people see first.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Contact wash and safe dry</li>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Wheels, tyres and arches</li>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Protection on clean paint, not over dirt</li>
+          <p>Wash, decontaminate, protect — in that order, because protection over dirt just seals the dirt in.</p>
+          <ul class="svc-list">
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Contact wash and a safe dry, no swirls added</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Wheels, tyres and arches, not just the panels</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Protection laid down on paint that is actually clean</li>
           </ul>
-          <a class="book" href="#book">Book this <span class="arrow" aria-hidden="true">&rarr;</span><span class="quote-tag">Quoted per vehicle</span></a>
+          <div class="svc-foot">
+            <a class="tlink" href="#book">Book exterior <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <span class="small">Quoted on the vehicle</span>
+          </div>
         </div>
       </article>
 
-      <article class="card rv pop" style="--d:200ms">
-        <div class="card-media">
-          <img src="img/polish.jpg" alt="Detailer machine polishing a panel" width="1400" height="1050" loading="lazy" decoding="async">
-          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
-        </div>
-        <div class="card-body">
+      <article class="svc rv">
+        <div class="svc-media"><img src="img/polish.jpg" alt="Machine polishing a car panel" width="1400" height="1050" loading="lazy" decoding="async"></div>
+        <div class="svc-body">
           <h3>Full detail</h3>
-          <p>Inside and out in one visit. The one that gets the reviews.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Complete interior and exterior</li>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Paint corrected where it needs it</li>
-            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Walk-round together before you take it</li>
+          <p>Inside and out in one visit. This is the one the five-star reviews were written about.</p>
+          <ul class="svc-list">
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Complete interior and exterior in a single booking</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Paint corrected where the paint needs correcting</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg>Walked round together before you take the keys</li>
           </ul>
-          <a class="book" href="#book">Book this <span class="arrow" aria-hidden="true">&rarr;</span><span class="quote-tag">Quoted per vehicle</span></a>
+          <div class="svc-foot">
+            <a class="tlink" href="#book">Book full detail <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <span class="small">Quoted on the vehicle</span>
+          </div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= BEFORE / AFTER ================= -->
-<section id="work" data-bg="#0B0B0D">
+<!-- ================= WORK ================= -->
+<section id="work">
   <div class="wrap">
-    <p class="eyebrow rv">The difference</p>
-    <h2 data-split style="font-size:clamp(32px,5vw,68px);max-width:13ch">Drag it. That is the whole pitch.</h2>
+    <h2 class="rv">The wheel nobody photographs.</h2>
+    <p class="lede rv" style="--d:80ms;margin-top:18px">Anyone can make a panel shine. The tell is what the arches, jambs and wheel faces look like afterwards.</p>
 
-    <div class="ba rv" id="ba" style="--d:120ms;margin-top:clamp(30px,4vw,48px)">
+    <div class="ba rv" id="ba" style="--d:140ms;margin-top:clamp(26px,3.5vw,42px)">
       <!-- SWAP: the owner's own before/after pair -->
       <img src="img/ba-before.jpg" alt="Alloy wheel caked in dirt and brake dust before detailing" width="2000" height="1250" loading="lazy" decoding="async">
       <img class="after" id="ba-after" src="img/ba-after.jpg" alt="The same wheel cleaned back to a bright finish" width="2000" height="1250" loading="lazy" decoding="async">
-      <span class="ba-tag l">Before</span>
-      <span class="ba-tag r">After</span>
+      <span class="ba-tag l">Before</span><span class="ba-tag r">After</span>
       <div class="ba-handle" id="ba-handle"></div>
       <input class="ba-range" type="range" id="ba-range" min="0" max="100" value="50" aria-label="Reveal amount, before and after">
     </div>
-    <p class="rv" style="margin-top:14px;font-size:13px;color:var(--grey)">Demo imagery — replaced with Undefeated's own work before launch</p>
-  </div>
-</section>
+    <p class="small" style="margin-top:12px">Drag the handle · demo imagery, replaced with his own before launch</p>
 
-<!-- ================= PROCESS =================
-     CONFIRM: these four steps are the generic order of a detail, not the
-     owner's stated process. -->
-<section id="process" data-bg="#0B0B0D" style="padding-top:0">
-  <div class="wrap">
-    <p class="eyebrow rv">How it runs</p>
-    <h2 data-split style="font-size:clamp(32px,5vw,68px);max-width:12ch">Four steps, every car.</h2>
-
-    <div class="steps">
-      <article class="step rv pop"><b>01</b><h3>You call</h3><p>Tell us the vehicle and what is bothering you about it. We quote on that, not on a menu.</p></article>
-      <article class="step rv pop" style="--d:90ms"><b>02</b><h3>Assess</h3><p>Paint, trim and interior looked over properly before anything is touched, so nothing gets missed.</p></article>
-      <article class="step rv pop" style="--d:180ms"><b>03</b><h3>The work</h3><p>Decontaminate, correct, protect. By hand, at the pace the paint actually needs.</p></article>
-      <article class="step rv pop" style="--d:270ms"><b>04</b><h3>Walk-round</h3><p>We go over the finished car together. Nothing gets signed off that you have not seen.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALLERY CAROUSEL ================= -->
-<section class="on-light" data-bg="#F4F4F2">
-  <div class="wrap">
-    <p class="eyebrow rv">Recent work</p>
-    <h2 data-split style="font-size:clamp(32px,5vw,68px);max-width:13ch">The bits people notice.</h2>
-
-    <div class="carousel rv" style="--d:120ms">
+    <div class="carousel rv">
       <div class="viewport">
         <div class="track" id="track">
           <!-- SWAP: the owner's own job photos -->
@@ -491,7 +440,7 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
           <figure class="slide"><img src="img/work-3.jpg" alt="Foam on black paintwork" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Decontamination</figcaption></figure>
           <figure class="slide"><img src="img/work-4.jpg" alt="Detailer cleaning a car interior" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Interior, by hand</figcaption></figure>
           <figure class="slide"><img src="img/work-5.jpg" alt="Polisher head working a dark panel edge" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Swirl removal</figcaption></figure>
-          <figure class="slide"><img src="img/foam.jpg" alt="Car covered in wash foam" width="1400" height="1050" loading="lazy" decoding="async"><figcaption>Contact wash</figcaption></figure>
+          <figure class="slide"><img src="img/slab.jpg" alt="Detailed black car front under studio light" width="2000" height="1000" loading="lazy" decoding="async"><figcaption>Finished</figcaption></figure>
         </div>
       </div>
       <div class="car-nav">
@@ -503,68 +452,68 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   </div>
 </section>
 
-<!-- ================= REVIEWS ================= -->
-<section id="reviews" data-bg="#0B0B0D">
+<!-- ================= PROCESS + REVIEWS (dark punctuation) ================= -->
+<section class="dark" id="reviews">
   <div class="wrap">
-    <p class="eyebrow rv">Reviews</p>
-    <h2 data-split style="font-size:clamp(32px,5vw,68px);max-width:14ch">Three customers. Three five-star reviews.</h2>
+    <h2 class="rv">Same four steps, every car.</h2>
+    <!-- CONFIRM: generic order of a detail, not the owner's stated process -->
+    <div class="steps">
+      <article class="step rv"><h3>You call</h3><p>Tell us the car and what is bothering you about it. That is what gets quoted — not a package name.</p></article>
+      <article class="step rv" style="--d:70ms"><h3>Assess</h3><p>Paint, trim and interior looked over before anything is touched, so nothing gets missed or over-sold.</p></article>
+      <article class="step rv" style="--d:140ms"><h3>The work</h3><p>Decontaminate, correct, protect. By hand, at the pace the paint actually needs.</p></article>
+      <article class="step rv" style="--d:210ms"><h3>Walk-round</h3><p>We go over the finished car together. Nothing is signed off that you have not seen.</p></article>
+    </div>
+
+    <h2 class="rv" style="margin-top:clamp(56px,8vw,110px)">Three customers so far. All three left five stars.</h2>
 
     <div class="revs">
-      <article class="rev rv pop">
+      <article class="rev rev-lead rv">
         <span class="stars" aria-label="5 out of 5">★★★★★</span>
         <blockquote>“By far the best car detailers I have ever worked with, very professional, and they take care of my car. They treat your car like if it is their own. You're in good hands when you work with them!”</blockquote>
-        <cite><span class="av" aria-hidden="true">R</span>Richard Hung · Google</cite>
+        <cite>Richard Hung · Google review</cite>
       </article>
-      <article class="rev rv pop" style="--d:100ms">
-        <span class="stars" aria-label="5 out of 5">★★★★★</span>
-        <blockquote>“Amazing detailing business always on time and never falls short of what you expect over and beyond”</blockquote>
-        <cite><span class="av" aria-hidden="true">H</span>Hens · Google</cite>
-      </article>
-      <article class="rev rv pop" style="--d:200ms">
-        <span class="stars" aria-label="5 out of 5">★★★★★</span>
-        <blockquote>“Best In The Business”</blockquote>
-        <cite><span class="av" aria-hidden="true">W</span>West DAWG · Google</cite>
-      </article>
+      <div class="rev-side">
+        <article class="rev rv" style="--d:80ms">
+          <span class="stars" aria-label="5 out of 5">★★★★★</span>
+          <blockquote>“Amazing detailing business always on time and never falls short of what you expect over and beyond”</blockquote>
+          <cite>Hens · Google review</cite>
+        </article>
+        <article class="rev rv" style="--d:150ms">
+          <span class="stars" aria-label="5 out of 5">★★★★★</span>
+          <blockquote>“Best In The Business”</blockquote>
+          <cite>West DAWG · Google review</cite>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- ================= PULL QUOTE ================= -->
-<section class="slab" data-bg="#0B0B0D" style="padding-block:0">
-  <img src="img/slab.jpg" alt="" width="2000" height="1000" loading="lazy" decoding="async">
-  <div class="inner">
-    <p class="rv">We aim to be undefeated.</p>
-    <cite class="rv" style="--d:120ms">The owner, replying to a customer review</cite>
+    <p class="owner-line rv">“We aim to be undefeated.”</p>
+    <p class="small rv" style="--d:80ms;margin-top:12px">The owner, replying to a customer review</p>
   </div>
 </section>
 
 <!-- ================= BOOK ================= -->
-<section id="book" class="on-light" data-bg="#F4F4F2">
+<section id="book">
   <div class="wrap">
-    <p class="eyebrow rv">Book it</p>
-    <h2 data-split style="font-size:clamp(32px,5vw,68px);max-width:13ch">Grab a slot, or just ring.</h2>
+    <h2 class="rv">Ring it in, or grab a slot.</h2>
+    <p class="lede rv" style="--d:80ms;margin-top:18px">Most people just call — it is the fastest way to get a straight answer on what the car needs.</p>
 
     <div class="book-grid">
-      <div>
-        <a class="call-card rv pop" href="tel:+19092053009">
-          <small>Fastest way — tap to call</small>
+      <div class="rv">
+        <a class="call-card" href="tel:+19092053009">
+          <small>Tap to call</small>
           <b>909 205 3009</b>
         </a>
-        <ul class="facts rv" style="--d:100ms">
+        <ul class="facts">
           <li><span>Hours</span><span>Open until 7pm<!-- CONFIRM: weekly hours --></span></li>
           <li><span>Area</span><span>909 · Southern California<!-- CONFIRM: cities --></span></li>
           <li><span>Rating</span><span>5.0 on Google · 3 reviews</span></li>
         </ul>
       </div>
 
-      <!-- =========================================================
-           Cal.com booking preview — visual mock of the real flow so the
-           owner sees how it behaves. Takes no real bookings. Going live =
-           create the event type on Cal.com and drop the embed in here.
-           CONFIRM: account, event types, availability, buffers, deposits.
-           ========================================================= -->
-      <div>
-        <div class="cal rv pop" id="cal" style="--d:100ms">
+      <!-- Cal.com booking PREVIEW — real calendar behaviour, no real bookings.
+           Going live = create the event type and drop the embed in here. -->
+      <div class="rv" style="--d:80ms">
+        <div class="cal" id="cal">
           <div class="cal-top">
             <span class="cal-av" aria-hidden="true">UD</span>
             <span><b>Detail booking</b><small id="cal-duration-label">60 min · Undefeated Detailing</small></span>
@@ -591,10 +540,7 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
             <button class="cal-confirm" id="cal-confirm" type="button" disabled>Confirm</button>
           </div>
         </div>
-        <div class="cal-foot rv">
-          <span>Preview — live bookings once Cal.com is connected</span>
-          <span>Instant confirmation · text reminders</span>
-        </div>
+        <p class="small" style="margin-top:12px">Preview — real bookings once Cal.com is connected. Instant confirmation and text reminders.</p>
       </div>
     </div>
   </div>
@@ -602,7 +548,7 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
 
 </main>
 
-<footer data-bg="#0B0B0D">
+<footer>
   <div class="wrap foot">
     <p style="margin:0">Undefeated Detailing · Auto detailing · <a href="tel:+19092053009">909 205 3009</a></p>
     <p style="margin:0">&copy; <span id="yr">2026</span> · Site by <a href="https://mvssolves.com" rel="noopener">MVS Solves</a></p>
@@ -614,7 +560,7 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   <a href="#services" data-sec="services">Services</a>
   <a href="#work" data-sec="work" class="hide-sm">Work</a>
   <a href="#reviews" data-sec="reviews" class="hide-sm">Reviews</a>
-  <a class="cta" href="tel:+19092053009">Call now</a>
+  <a class="cta" href="tel:+19092053009">Call</a>
 </nav>
 
 <script type="application/ld+json">
@@ -635,118 +581,138 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  /* hero video */
-  var v = document.getElementById('hero-video');
-  var saveData = navigator.connection && navigator.connection.saveData;
-  if (v && !reduced && !saveData) { v.preload = 'auto'; v.load(); var pr = v.play(); if (pr) pr.catch(function () {}); }
-
-  /* live open/closed badge — only the 7pm close is verified */
-  var badge = document.getElementById('status'), btext = document.getElementById('status-text');
+  /* open / closed — only the 7pm close is verified, so it asserts nothing else */
+  var clock = document.getElementById('clock');
   (function tick() {
     var now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-    var open = now.getHours() < 19;
-    badge.dataset.state = open ? 'open' : 'closed';
-    btext.textContent = open ? 'Open — closes 7pm' : 'Closed — call tomorrow';
+    clock.textContent = now.getHours() < 19 ? 'Open now — until 7pm' : 'Closed — open again tomorrow';
     setTimeout(tick, 60000);
   })();
 
-  /* split headlines into per-word masks, walking child nodes so inline
-     elements (the accent <span>) survive intact */
-  document.querySelectorAll('[data-split]').forEach(function (h) {
-    var i = 0;
-    function walk(node) {
-      var out = '';
-      [].slice.call(node.childNodes).forEach(function (child) {
-        if (child.nodeType === 3) {
-          var words = child.textContent.split(/\s+/).filter(Boolean);
-          out += words.map(function (w) {
-            return '<span class="tr"><i style="--wd:' + (i++ * 55) + 'ms">' + w + '</i></span>';
-          }).join(' ') + (words.length ? ' ' : '');
-        } else if (child.nodeType === 1) {
-          out += '<' + child.tagName.toLowerCase() + ' class="' + child.className + '">' +
-                 walk(child) + '</' + child.tagName.toLowerCase() + '> ';
-        }
-      });
-      return out;
-    }
-    h.innerHTML = walk(h);
-  });
+  /* ---------------------------------------------------------------
+     THE WIPE. The hero arrives under a layer of road film on a canvas;
+     dragging erases it and the clean car shows through. One scripted
+     stroke on load teaches the affordance. Reduced motion: starts clean.
+     --------------------------------------------------------------- */
+  (function () {
+    var stage = document.getElementById('stage'), cv = document.getElementById('grime'),
+        hint = document.getElementById('hint');
+    var ctx = cv && cv.getContext ? cv.getContext('2d') : null;
+    if (!ctx || reduced) { if (cv) cv.remove(); if (hint) hint.remove(); return; }
 
-  /* reveals + word reveals */
+    var dpr = Math.min(devicePixelRatio || 1, 2), w = 0, h = 0, touched = false;
+
+    function grime() {
+      var r = stage.getBoundingClientRect();
+      w = Math.max(1, r.width); h = Math.max(1, r.height);
+      cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.globalCompositeOperation = 'source-over';
+
+      var film = ctx.createLinearGradient(0, 0, w, h);
+      film.addColorStop(0, 'rgba(128,114,98,.8)');
+      film.addColorStop(.5, 'rgba(105,96,85,.76)');
+      film.addColorStop(1, 'rgba(88,82,74,.82)');
+      ctx.fillStyle = film; ctx.fillRect(0, 0, w, h);
+
+      /* mottling, so it reads as road film rather than a flat tint */
+      for (var i = 0; i < 190; i++) {
+        var x = Math.random() * w, y = Math.random() * h, rad = 18 + Math.random() * 90;
+        var g = ctx.createRadialGradient(x, y, 0, x, y, rad);
+        g.addColorStop(0, Math.random() > .5 ? 'rgba(58,52,45,.3)' : 'rgba(180,170,154,.26)');
+        g.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, rad, 0, 6.284); ctx.fill();
+      }
+      /* dried water spots */
+      for (var j = 0; j < 130; j++) {
+        var sx = Math.random() * w, sy = Math.random() * h;
+        ctx.fillStyle = 'rgba(214,207,194,' + (.18 + Math.random() * .3) + ')';
+        ctx.beginPath(); ctx.arc(sx, sy, 1 + Math.random() * 3.4, 0, 6.284); ctx.fill();
+      }
+      ctx.globalCompositeOperation = 'destination-out';
+    }
+
+    function wipe(x, y) {
+      var r = 62, g = ctx.createRadialGradient(x, y, 0, x, y, r);
+      g.addColorStop(0, 'rgba(0,0,0,1)');
+      g.addColorStop(.55, 'rgba(0,0,0,.92)');
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.284); ctx.fill();
+    }
+
+    var last = null;
+    function at(e) {
+      var r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      if (last) { /* interpolate so a fast drag leaves no gaps */
+        var dx = x - last[0], dy = y - last[1], steps = Math.ceil(Math.hypot(dx, dy) / 18);
+        for (var i = 1; i < steps; i++) wipe(last[0] + dx * i / steps, last[1] + dy * i / steps);
+      }
+      wipe(x, y); last = [x, y];
+      if (!touched) { touched = true; hint.classList.add('gone'); }
+    }
+    cv.addEventListener('pointermove', function (e) { if (e.pointerType === 'mouse' || e.buttons) at(e); });
+    cv.addEventListener('pointerdown', function (e) { last = null; at(e); });
+    cv.addEventListener('pointerleave', function () { last = null; });
+
+    grime();
+    addEventListener('resize', function () { last = null; grime(); });
+
+    /* one demonstration stroke once the hero is on screen */
+    new IntersectionObserver(function (es, obs) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        obs.unobserve(e.target);
+        var t0 = null;
+        requestAnimationFrame(function step(t) {
+          if (!t0) t0 = t;
+          var p = Math.min((t - t0) / 1500, 1);
+          wipe(w * (0.1 + 0.8 * p), h * (0.5 + Math.sin(p * 3.6) * 0.16));
+          if (p < 1) requestAnimationFrame(step);
+        });
+      });
+    }, { threshold: .35 }).observe(stage);
+  })();
+
+  /* reveals — content is visible by default, this only enhances it */
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.rv,[data-split]').forEach(function (el) { io.observe(el); });
-
-  /* count-up stats */
-  var countIO = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      countIO.unobserve(e.target);
-      var el = e.target, target = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0),
-          suffix = el.dataset.suffix || '', t0 = null, dur = 1100;
-      if (reduced) { el.textContent = target.toFixed(dec) + suffix; return; }
-      requestAnimationFrame(function step(t) {
-        if (!t0) t0 = t;
-        var p = Math.min((t - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = (target * eased).toFixed(dec) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      });
-    });
-  }, { threshold: .5 });
-  document.querySelectorAll('[data-count]').forEach(function (el) { countIO.observe(el); });
+  }, { rootMargin: '0px 0px -7% 0px' });
+  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
 
   /* dock active state */
-  var dock = document.getElementById('dock'),
-      pill = document.getElementById('pill'), links = [].slice.call(dock.querySelectorAll('a[data-sec]'));
-  function movePill(a) {
-    if (!a) { pill.style.opacity = 0; return; }
-    pill.style.opacity = 1;
-    pill.style.width = a.offsetWidth + 'px';
-    pill.style.transform = 'translate3d(' + a.offsetLeft + 'px,0,0)';
-  }
+  var dock = document.getElementById('dock'), pill = document.getElementById('pill'),
+      links = [].slice.call(dock.querySelectorAll('a[data-sec]'));
   var secIO = new IntersectionObserver(function (es) {
     es.forEach(function (e) {
       if (!e.isIntersecting) return;
       var match = links.filter(function (l) { return l.dataset.sec === e.target.id; })[0];
       links.forEach(function (l) { l.classList.toggle('on', l === match); });
-      movePill(match);
+      if (!match) { pill.style.opacity = 0; return; }
+      pill.style.opacity = 1;
+      pill.style.width = match.offsetWidth + 'px';
+      pill.style.transform = 'translate3d(' + match.offsetLeft + 'px,0,0)';
     });
   }, { rootMargin: '-45% 0px -45% 0px' });
-  document.querySelectorAll('[data-bg]').forEach(function (s) { secIO.observe(s); });
+  ['services', 'work', 'reviews'].forEach(function (id) {
+    var el = document.getElementById(id); if (el) secIO.observe(el);
+  });
 
   /* before / after */
-  var range = document.getElementById('ba-range'),
-      after = document.getElementById('ba-after'),
+  var range = document.getElementById('ba-range'), after = document.getElementById('ba-after'),
       handle = document.getElementById('ba-handle');
-  function setBA(val) { after.style.clipPath = 'inset(0 0 0 ' + val + '%)'; handle.style.left = val + '%'; }
+  function setBA(v) { after.style.clipPath = 'inset(0 0 0 ' + v + '%)'; handle.style.left = v + '%'; }
   range.addEventListener('input', function () { setBA(this.value); });
   setBA(range.value);
-  /* nudge it once when it first appears so people know it moves */
-  new IntersectionObserver(function (es, obs) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting || reduced) return;
-      obs.unobserve(e.target);
-      var t0 = null;
-      requestAnimationFrame(function step(t) {
-        if (!t0) t0 = t;
-        var p = Math.min((t - t0) / 1600, 1);
-        var val = 50 + Math.sin(p * Math.PI * 2) * 26;
-        range.value = val; setBA(val);
-        if (p < 1) requestAnimationFrame(step);
-      });
-    });
-  }, { threshold: .45 }).observe(document.getElementById('ba'));
 
   /* carousel */
   var track = document.getElementById('track'), dots = document.getElementById('dots'),
       slides = [].slice.call(track.children), idx = 0;
-  function perView() { return window.innerWidth >= 1100 ? 3 : (window.innerWidth >= 760 ? 2 : 1); }
+  function perView() { return innerWidth >= 1100 ? 3 : (innerWidth >= 760 ? 2 : 1); }
   function maxIdx() { return Math.max(0, slides.length - perView()); }
   function go(i) {
     idx = Math.max(0, Math.min(i, maxIdx()));
-    var s = slides[0].getBoundingClientRect().width + 14;
-    track.style.transform = 'translate3d(' + (-idx * s) + 'px,0,0)';
+    var step = slides[0].getBoundingClientRect().width + 12;
+    track.style.transform = 'translate3d(' + (-idx * step) + 'px,0,0)';
     [].slice.call(dots.children).forEach(function (d, n) { d.setAttribute('aria-current', n === idx ? 'true' : 'false'); });
   }
   function buildDots() {
@@ -754,7 +720,7 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
     for (var i = 0; i <= maxIdx(); i++) {
       var b = document.createElement('button');
       b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-label', 'Slide ' + (i + 1));
-      (function (i) { b.addEventListener('click', function () { go(i); }); })(i);
+      (function (n) { b.addEventListener('click', function () { go(n); }); })(i);
       dots.appendChild(b);
     }
     go(Math.min(idx, maxIdx()));
@@ -765,9 +731,9 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   buildDots();
 
   /* ---------------------------------------------------------------
-     Cal.com booking preview. Real calendar maths so the demo behaves
-     like the live embed: past days dead, Sundays closed, slots stop
-     before the 7pm close. Slots are illustrative only.
+     Cal.com booking preview. Real calendar maths so it behaves like the
+     live embed: past days dead, Sundays closed, slots stop before the
+     7pm close. The slots themselves are illustrative.
      --------------------------------------------------------------- */
   var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -783,22 +749,21 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   DOW.forEach(function (d) {
     var s = document.createElement('span'); s.className = 'cal-dow'; s.textContent = d; dowEl.appendChild(s);
   });
-  function bookable(date) { return date >= today && date.getDay() !== 0; }
+  function bookable(d) { return d >= today && d.getDay() !== 0; }
   function slotsFor(date) {
-    var out = [], start = 8, close = 19, step = duration >= 180 ? 3 : (duration >= 60 ? 1.5 : 1);
-    for (var h = start; h + duration / 60 <= close; h += step) {
+    var out = [], step = duration >= 180 ? 3 : (duration >= 60 ? 1.5 : 1);
+    for (var h = 8; h + duration / 60 <= 19; h += step) {
       var hh = Math.floor(h), mm = Math.round((h - hh) * 60);
       if ((date.getDate() + hh) % 4 === 0) continue;
-      var ampm = hh >= 12 ? 'pm' : 'am', disp = hh % 12 === 0 ? 12 : hh % 12;
-      out.push(disp + ':' + (mm < 10 ? '0' + mm : mm) + ampm);
+      out.push((hh % 12 === 0 ? 12 : hh % 12) + ':' + (mm < 10 ? '0' + mm : mm) + (hh >= 12 ? 'pm' : 'am'));
     }
     return out;
   }
   function renderSlots() {
     slotsEl.innerHTML = ''; confirmEl.disabled = true; chosenSlot = null;
-    if (!chosenDay) { slotsEl.innerHTML = '<p style="margin:0;font-size:14px;color:#83848A">Choose a day to see open times.</p>'; return; }
+    if (!chosenDay) { slotsEl.innerHTML = '<p class="small" style="margin:0">Pick a day to see open times.</p>'; return; }
     var list = slotsFor(chosenDay);
-    if (!list.length) { slotsEl.innerHTML = '<p style="margin:0;font-size:14px;color:#83848A">Fully booked — try the next day, or call.</p>'; return; }
+    if (!list.length) { slotsEl.innerHTML = '<p class="small" style="margin:0">Booked out — try the next day, or call.</p>'; return; }
     list.forEach(function (t) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'cal-slot'; b.textContent = t; b.setAttribute('aria-pressed', 'false');
@@ -812,8 +777,7 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   function renderMonth() {
     daysEl.innerHTML = '';
     monthEl.textContent = MONTHS[view.getMonth()] + ' ' + view.getFullYear();
-    var first = new Date(view.getFullYear(), view.getMonth(), 1);
-    var lead = (first.getDay() + 6) % 7;
+    var lead = (new Date(view.getFullYear(), view.getMonth(), 1).getDay() + 6) % 7;
     var total = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
     for (var i = 0; i < lead; i++) daysEl.appendChild(document.createElement('span'));
     for (var d = 1; d <= total; d++) {
@@ -838,9 +802,9 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   }
   document.getElementById('cal-prev').addEventListener('click', function () { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); renderMonth(); });
   document.getElementById('cal-next').addEventListener('click', function () { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); renderMonth(); });
-  document.querySelectorAll('.cal-top .dur button').forEach(function (b) {
+  document.querySelectorAll('.dur button').forEach(function (b) {
     b.addEventListener('click', function () {
-      document.querySelectorAll('.cal-top .dur button').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+      document.querySelectorAll('.dur button').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
       b.setAttribute('aria-pressed', 'true'); duration = +b.dataset.dur;
       durLabel.textContent = b.textContent.replace('m', ' min') + ' · Undefeated Detailing';
       renderSlots();
@@ -849,7 +813,7 @@ footer{border-top:1px solid rgba(244,244,242,.1);padding:clamp(32px,4vw,48px) 0 
   confirmEl.addEventListener('click', function () {
     var box = document.createElement('div');
     box.className = 'cal-done';
-    box.innerHTML = '<b>Preview only</b>This is where the booking is confirmed — ' + selEl.textContent + ' at ' + chosenSlot +
+    box.innerHTML = '<b>Preview only</b>This is where it confirms — ' + selEl.textContent + ' at ' + chosenSlot +
                     '. Once Cal.com is connected it lands in the calendar, texts a reminder and blocks the slot. Call 909 205 3009 for now.';
     slotsEl.innerHTML = ''; slotsEl.appendChild(box); confirmEl.disabled = true;
   });
